@@ -252,3 +252,7 @@ export const TaskList = () => {
 
 [React-Admin](https://marmelab.com/react-admin/)
 * looked really nice but I some features I desired were enterprise.  Wanted something next-ui specific
+
+
+# Contributing
+Please run `changeset` along with your PR.  Give consideration for the summary as it is what will show up in the changelog.
