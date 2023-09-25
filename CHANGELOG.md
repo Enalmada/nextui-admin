@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.5
+
+### Patch Changes
+
+- a5a740f: use type module
+
 ## 0.0.4
 
 ### Patch Changes
