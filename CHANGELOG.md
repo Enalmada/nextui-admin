@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.3
+
+### Patch Changes
+
+- a583cac: framer motion as dependency
+
 ## 0.0.2
 
 ### Patch Changes
