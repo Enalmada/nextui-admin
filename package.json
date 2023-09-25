@@ -38,5 +38,6 @@
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "type": "module"
 }
