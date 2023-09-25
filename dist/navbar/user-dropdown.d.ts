@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 export interface UserConfig {
     displayName?: string;
     email?: string;
@@ -12,6 +13,7 @@ export interface DropdownItemConfig {
 }
 export interface UserDropdownConfig {
     user: UserConfig;
+    trigger: ReactNode;
     items: DropdownItemConfig[];
 }
 interface Props {
