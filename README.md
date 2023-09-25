@@ -13,6 +13,22 @@ It doesn't add modularization for every possible spot.  Feel free to improve it 
 bun add @enalmada/nextui-admin
 ```
 
+Add `'./node_modules/@enalmada/nextui-admin/dist/**/*.{js,ts,jsx,tsx}',` to tailwind config file:
+```
+const { nextui } = require('@nextui-org/react');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@enalmada/nextui-admin/dist/**/*.{js,ts,jsx,tsx}',
+  ],
+  ...
+}
+```
+
 ## Usage
 
 ### Layout
@@ -117,8 +133,13 @@ export default function AdminLayout({ me, children }: Props) {
         photoURL: 'https://example.com/photo.jpg',
     };
 
+  const trigger: React.ReactNode = (
+          <Avatar ... />
+  );
+
     const userDropdownConfig: UserDropdownConfig = {
         user,
+        trigger,
         items,
     };
 
