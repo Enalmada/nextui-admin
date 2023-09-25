@@ -13,7 +13,7 @@ interface Props {
 
 export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { collapsed, setCollapsed } = useSidebarContext();
+  const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
 
   const handleClick = () => {
     if (window.innerWidth < 768) {
