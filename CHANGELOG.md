@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.4
+
+### Patch Changes
+
+- d336d6b: build with bun
+
 ## 0.0.3
 
 ### Patch Changes
