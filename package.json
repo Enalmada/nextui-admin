@@ -4,7 +4,12 @@
   "scripts": {
     "build": "rm -rf dist && bun build.mjs && bun run build:declaration",
     "build:declaration": "tsc --emitDeclarationOnly",
-    "release": "bun run build && bunx changeset publish"
+    "lint": "eslint --ext .ts,.tsx,.cjs,.mjs && bun type-check",
+    "lint:fix": "eslint --fix --ext .ts,.tsx,.cjs,.mjs && bun type-check",
+    "precommit": "bun lint-staged",
+    "prepare": "husky install",
+    "release": "bun run build && bunx changeset publish",
+    "type-check": "bun --bun tsc --noEmit"
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
@@ -16,6 +21,16 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "@types/node": "^20.6.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
     "@types/react": "^18.2.22",
     "typescript": "^5.2.2"
   },

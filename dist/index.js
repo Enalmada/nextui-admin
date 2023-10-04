@@ -4,7 +4,7 @@ import React from "react";
 // src/navbar/darkmodeswitc
 import {useEffect as useEffect2, useState} from "react";
 
-// src/navbar/darkmodeswitch.tsxEffect.ts
+// src/navbar/darkmodeswitch.tsxn.tsxt.ts
 import {useEffect, useLayoutEffect} from "react";
 var useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -194,7 +194,7 @@ var NavbarWrapper = ({ userDropdownConfig, children }) => {
 // src/navbar/darkmodeswit
 import {usePathname} from "next/navigation";
 
-// src/navbar/darkmodeswitch.tsxEffec
+// src/navbar/darkmodeswitch.tsxn.tsx
 import {
 jsxDEV as jsxDEV5
 } from "react/jsx-dev-runtime";
