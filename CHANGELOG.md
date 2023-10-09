@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.6
+
+### Patch Changes
+
+- fd841a0: linting update, test foundation
+
 ## 0.0.5
 
 ### Patch Changes
