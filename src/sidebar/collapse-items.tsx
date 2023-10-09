@@ -11,7 +11,7 @@ interface Props {
 
 export const CollapseItems = ({ icon, items, title }: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [open, setOpen] = useState(false);
+  const [_open, _setOpen] = useState(false);
 
   return (
     <div className="flex h-full cursor-pointer items-center gap-4">

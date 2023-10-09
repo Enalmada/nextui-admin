@@ -1,4 +1,4 @@
-import { SortDescriptor } from '@nextui-org/react';
+import { type SortDescriptor } from '@nextui-org/react';
 
 import { Layout } from './layout/layout';
 import {

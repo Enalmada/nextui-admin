@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode} from "react";
+import { type ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Dropdown,
@@ -70,10 +70,7 @@ export const UserDropdown = ({ userDropdownConfig }: Props) => {
   return (
     <Dropdown>
       <NavbarItem>
-        <DropdownTrigger>
-          {trigger}
-
-        </DropdownTrigger>
+        <DropdownTrigger>{trigger}</DropdownTrigger>
       </NavbarItem>
       <DropdownMenu
         aria-label="User menu actions"

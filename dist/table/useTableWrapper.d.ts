@@ -1,7 +1,7 @@
 import React from 'react';
-import { SortDescriptor } from '@nextui-org/react';
-import { PageDescriptor, TableWrapperProps } from './TableWrapper';
-export declare function useTableWrapper<T extends unknown>(): {
+import { type SortDescriptor } from '@nextui-org/react';
+import { type PageDescriptor, type TableWrapperProps } from './TableWrapper';
+export declare function useTableWrapper<T>(): {
     TableWrapperComponent: React.FC<TableWrapperProps<T>>;
     sortDescriptor: SortDescriptor;
     setSortDescriptor: React.Dispatch<React.SetStateAction<SortDescriptor>>;
