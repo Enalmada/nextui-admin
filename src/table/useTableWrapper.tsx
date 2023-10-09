@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { SortDescriptor } from '@nextui-org/react';
+import { type SortDescriptor } from '@nextui-org/react';
 
-import { PageDescriptor, TableWrapper, TableWrapperProps } from './TableWrapper';
+import { TableWrapper, type PageDescriptor, type TableWrapperProps } from './TableWrapper';
 
-export function useTableWrapper<T extends unknown>() {
+export function useTableWrapper<T>() {
   const [sortDescriptor, setSortDescriptor] = useState<SortDescriptor>({
     column: 'id',
     direction: 'descending',

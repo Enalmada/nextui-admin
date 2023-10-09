@@ -4,6 +4,7 @@
     "moduleResolution": "node",
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "ES2022"],
+    "types": ["vitest/globals"],
 
     "declaration": true,
     "jsx": "react-jsx",
@@ -24,9 +25,10 @@
     "rootDir": "./src"
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
-    "dist", "node_modules", "**/*.spec.ts"
+    "dist", "node_modules", "test"
   ]
 }
