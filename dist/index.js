@@ -1,14 +1,14 @@
-// src/navbar/navbar.sty
-import React from "react";
+// src/navbar/darkmodesw
+import React9 from "react";
 
-// src/navbar/navbar.styles
+// src/navbar/darkmodeswitc
 import {useEffect as useEffect2, useState} from "react";
 
-// src/navbar/navbar.styles.tssxEffect.ts
+// src/navbar/darkmodeswitch.tsxn.tsxt.ts
 import {useEffect, useLayoutEffect} from "react";
 var useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-// src/navbar/navbar.styles
+// src/navbar/darkmodeswitc
 var useLockedBody = (initialLocked = false) => {
   const [locked, setLocked] = useState(initialLocked);
   useIsomorphicLayoutEffect(() => {
@@ -38,10 +38,14 @@ var useLockedBody = (initialLocked = false) => {
   return [locked, setLocked];
 };
 
-// src/navbar/navbar.sty
+// src/navbar/darkmodesw
+import React4 from "react";
 import {Navbar, NavbarContent} from "@nextui-org/react";
 
-// src/navbar/navbar.styles.tss
+// src/navbar/darkmodeswitch.tsx
+import React from "react";
+
+// src/navbar/darkmodeswitch.ts
 import {createContext, useContext} from "react";
 var SidebarContext = createContext({
   collapsed: false,
@@ -52,7 +56,7 @@ var useSidebarContext = () => {
   return useContext(SidebarContext);
 };
 
-// src/navbar/navbar.styles.ts
+// src/navbar/darkmodeswitch.t
 import {tv} from "@nextui-org/react";
 var StyledBurgerButton = tv({
   base: "absolute flex flex-col justify-around w-6 h-6 bg-transparent border-none cursor-pointer padding-0 z-[202] focus:outline-none [&_div]:w-6 [&_div]:h-px [&_div]:bg-default-900 [&_div]:rounded-xl  [&_div]:transition-all  [&_div]:relative  [&_div]:origin-[1px] ",
@@ -63,23 +67,17 @@ var StyledBurgerButton = tv({
   }
 });
 
-// src/navbar/navbar.styles.tssx
-import {
-jsxDEV
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodeswitch.tsx
 var BurguerButton = () => {
   const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
-  return jsxDEV("div", {
+  return React.createElement("div", {
     className: StyledBurgerButton(),
-    onClick: setCollapsed,
-    children: [
-      jsxDEV("div", {}, undefined, false, undefined, this),
-      jsxDEV("div", {}, undefined, false, undefined, this)
-    ]
-  }, undefined, true, undefined, this);
+    onClick: setCollapsed
+  }, React.createElement("div", null), React.createElement("div", null));
 };
 
-// src/navbar/navbar.styles.tss
+// src/navbar/darkmodeswitch.ts
+import React3 from "react";
 import {useRouter} from "next/navigation";
 import {
 Dropdown,
@@ -89,146 +87,96 @@ DropdownTrigger,
 NavbarItem
 } from "@nextui-org/react";
 
-// src/navbar/navbar.styles.tssx
+// src/navbar/darkmodeswitch.tsx
 import {Switch} from "@nextui-org/react";
 import {useTheme as useNextTheme} from "next-themes";
-import {
-jsxDEV as jsxDEV2
-} from "react/jsx-dev-runtime";
+import React2 from "react";
 var DarkModeSwitch = () => {
   const { setTheme, theme } = useNextTheme();
-  return jsxDEV2(Switch, {
+  return React2.createElement(Switch, {
     isSelected: theme === "dark",
     onValueChange: (e) => setTheme(e ? "dark" : "light")
-  }, undefined, false, undefined, this);
+  });
 };
 
-// src/navbar/navbar.styles.tss
-import {
-jsxDEV as jsxDEV3
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodeswitch.ts
 var UserDropdown = ({ userDropdownConfig }) => {
   const router = useRouter();
   const { user, trigger, items } = userDropdownConfig;
   const dropdownItems = items.map((item) => {
     if (item.isSpecial) {
-      return jsxDEV3(DropdownItem, {
+      return React3.createElement(DropdownItem, {
         className: "h-14 gap-2",
         textValue: `Signed in as: ${user.email}`,
-        children: [
-          jsxDEV3("p", {
-            className: "font-semibold",
-            children: "Signed in as"
-          }, undefined, false, undefined, this),
-          jsxDEV3("p", {
-            className: "font-semibold",
-            children: user.email
-          }, undefined, false, undefined, this)
-        ]
-      }, item.key, true, undefined, this);
+        key: item.key
+      }, React3.createElement("p", {
+        className: "font-semibold"
+      }, "Signed in as"), React3.createElement("p", {
+        className: "font-semibold"
+      }, user.email));
     }
-    return jsxDEV3(DropdownItem, {
+    return React3.createElement(DropdownItem, {
       color: item.color,
-      children: item.label
-    }, item.key, false, undefined, this);
+      key: item.key
+    }, item.label);
   });
-  dropdownItems.push(jsxDEV3(DropdownItem, {
-    children: jsxDEV3(DarkModeSwitch, {}, undefined, false, undefined, this)
-  }, "switch", false, undefined, this));
-  return jsxDEV3(Dropdown, {
-    children: [
-      jsxDEV3(NavbarItem, {
-        children: jsxDEV3(DropdownTrigger, {
-          children: trigger
-        }, undefined, false, undefined, this)
-      }, undefined, false, undefined, this),
-      jsxDEV3(DropdownMenu, {
-        "aria-label": "User menu actions",
-        onAction: (key) => {
-          router.push(items.find((item) => item.key === key)?.href || "/");
-        },
-        children: dropdownItems
-      }, undefined, false, undefined, this)
-    ]
-  }, undefined, true, undefined, this);
+  dropdownItems.push(React3.createElement(DropdownItem, {
+    key: "switch"
+  }, React3.createElement(DarkModeSwitch, null)));
+  return React3.createElement(Dropdown, null, React3.createElement(NavbarItem, null, React3.createElement(DropdownTrigger, null, trigger)), React3.createElement(DropdownMenu, {
+    "aria-label": "User menu actions",
+    onAction: (key) => {
+      router.push(items.find((item) => item.key === key)?.href || "/");
+    }
+  }, dropdownItems));
 };
 
-// src/navbar/navbar.sty
-import {
-jsxDEV as jsxDEV4
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodesw
 var NavbarWrapper = ({ userDropdownConfig, children }) => {
-  return jsxDEV4("div", {
-    className: "relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden",
-    children: [
-      jsxDEV4(Navbar, {
-        isBordered: true,
-        className: "w-full",
-        classNames: {
-          wrapper: "w-full max-w-full"
-        },
-        children: [
-          jsxDEV4(NavbarContent, {
-            className: "md:hidden",
-            children: jsxDEV4(BurguerButton, {}, undefined, false, undefined, this)
-          }, undefined, false, undefined, this),
-          jsxDEV4(NavbarContent, {
-            className: "w-full max-md:hidden"
-          }, undefined, false, undefined, this),
-          jsxDEV4(NavbarContent, {
-            justify: "end",
-            className: "w-fit data-[justify=end]:flex-grow-0",
-            children: jsxDEV4(NavbarContent, {
-              children: jsxDEV4(UserDropdown, {
-                userDropdownConfig
-              }, undefined, false, undefined, this)
-            }, undefined, false, undefined, this)
-          }, undefined, false, undefined, this)
-        ]
-      }, undefined, true, undefined, this),
-      children
-    ]
-  }, undefined, true, undefined, this);
+  return React4.createElement("div", {
+    className: "relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
+  }, React4.createElement(Navbar, {
+    isBordered: true,
+    className: "w-full",
+    classNames: {
+      wrapper: "w-full max-w-full"
+    }
+  }, React4.createElement(NavbarContent, {
+    className: "md:hidden"
+  }, React4.createElement(BurguerButton, null)), React4.createElement(NavbarContent, {
+    className: "w-full max-md:hidden"
+  }), React4.createElement(NavbarContent, {
+    justify: "end",
+    className: "w-fit data-[justify=end]:flex-grow-0"
+  }, React4.createElement(NavbarContent, null, React4.createElement(UserDropdown, {
+    userDropdownConfig
+  })))), children);
 };
 
-// src/navbar/navbar.style
+// src/navbar/darkmodeswit
+import React8 from "react";
 import {usePathname} from "next/navigation";
 
-// src/navbar/navbar.styles.tssxEffec
-import {
-jsxDEV as jsxDEV5
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodeswitch.tsxn.tsx
+import React5 from "react";
 var CompaniesDropdown = ({ adminNavHeader }) => {
-  return jsxDEV5("div", {
-    className: "w-full ",
-    children: jsxDEV5("div", {
-      className: "flex items-center gap-2",
-      children: [
-        adminNavHeader.logo,
-        jsxDEV5("div", {
-          className: "flex flex-col gap-4",
-          children: [
-            jsxDEV5("h3", {
-              className: "m-0 -mb-4 whitespace-nowrap text-xl font-medium text-default-900",
-              children: adminNavHeader.name
-            }, undefined, false, undefined, this),
-            jsxDEV5("span", {
-              className: "text-xs font-medium text-default-500",
-              children: adminNavHeader.name2
-            }, undefined, false, undefined, this)
-          ]
-        }, undefined, true, undefined, this)
-      ]
-    }, undefined, true, undefined, this)
-  }, undefined, false, undefined, this);
+  return React5.createElement("div", {
+    className: "w-full "
+  }, React5.createElement("div", {
+    className: "flex items-center gap-2"
+  }, adminNavHeader.logo, React5.createElement("div", {
+    className: "flex flex-col gap-4"
+  }, React5.createElement("h3", {
+    className: "m-0 -mb-4 whitespace-nowrap text-xl font-medium text-default-900"
+  }, adminNavHeader.name), React5.createElement("span", {
+    className: "text-xs font-medium text-default-500"
+  }, adminNavHeader.name2))));
 };
 
-// src/navbar/navbar.styles.tss
+// src/navbar/darkmodeswitch.ts
+import React6 from "react";
 import NextLink from "next/link";
 import clsx from "clsx";
-import {
-jsxDEV as jsxDEV6
-} from "react/jsx-dev-runtime";
 var SidebarItem = ({ icon, title, isActive, href = "" }) => {
   const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
   const handleClick = () => {
@@ -236,41 +184,28 @@ var SidebarItem = ({ icon, title, isActive, href = "" }) => {
       setCollapsed();
     }
   };
-  return jsxDEV6(NextLink, {
+  return React6.createElement(NextLink, {
     href,
-    className: "max-w-full text-default-900 active:bg-none",
-    children: jsxDEV6("div", {
-      className: clsx(isActive ? "bg-primary-100 [&_svg_path]:fill-primary-500" : "hover:bg-default-100", "flex h-full min-h-[44px] w-full cursor-pointer items-center gap-2 rounded-xl px-3.5 transition-all duration-150 active:scale-[0.98]"),
-      onClick: handleClick,
-      children: [
-        icon,
-        jsxDEV6("span", {
-          className: "text-default-900",
-          children: title
-        }, undefined, false, undefined, this)
-      ]
-    }, undefined, true, undefined, this)
-  }, undefined, false, undefined, this);
+    className: "max-w-full text-default-900 active:bg-none"
+  }, React6.createElement("div", {
+    className: clsx(isActive ? "bg-primary-100 [&_svg_path]:fill-primary-500" : "hover:bg-default-100", "flex h-full min-h-[44px] w-full cursor-pointer items-center gap-2 rounded-xl px-3.5 transition-all duration-150 active:scale-[0.98]"),
+    onClick: handleClick
+  }, icon, React6.createElement("span", {
+    className: "text-default-900"
+  }, title)));
 };
 
-// src/navbar/navbar.styles.tss
-import {
-jsxDEV as jsxDEV7
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodeswitch.ts
+import React7 from "react";
 var SidebarMenu = ({ title, children }) => {
-  return jsxDEV7("div", {
-    className: "flex flex-col gap-2",
-    children: [
-      jsxDEV7("span", {
-        className: "text-xs font-normal ",
-        children: title
-      }, undefined, false, undefined, this),
-      children
-    ]
-  }, undefined, true, undefined, this);
+  return React7.createElement("div", {
+    className: "flex flex-col gap-2"
+  }, React7.createElement("span", {
+    className: "text-xs font-normal "
+  }, title), children);
 };
 
-// src/navbar/navbar.styles.tssx
+// src/navbar/darkmodeswitch.tsx
 import {tv as tv2} from "@nextui-org/react";
 var SidebarWrapper = tv2({
   base: "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ",
@@ -299,90 +234,68 @@ var Sidebar = Object.assign(SidebarWrapper, {
   Footer
 });
 
-// src/navbar/navbar.style
-import {
-jsxDEV as jsxDEV8
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodeswit
 var ConditionalWrapper = ({ condition, wrapper, children }) => condition ? wrapper(children) : children;
 var SidebarWrapper2 = ({ sidebarConfig, adminNavHeader }) => {
   const { collapsed, setCollapsed } = useSidebarContext();
   const pathname = usePathname();
-  return jsxDEV8("aside", {
-    className: "sticky top-0 z-[202] h-screen",
-    children: [
-      collapsed ? jsxDEV8("div", {
-        className: Sidebar.Overlay(),
-        onClick: setCollapsed
-      }, undefined, false, undefined, this) : null,
-      jsxDEV8("div", {
-        className: Sidebar({
-          collapsed
-        }),
-        children: [
-          jsxDEV8("div", {
-            className: Sidebar.Header(),
-            children: jsxDEV8(CompaniesDropdown, {
-              adminNavHeader
-            }, undefined, false, undefined, this)
-          }, undefined, false, undefined, this),
-          jsxDEV8("div", {
-            className: "flex h-full flex-col justify-between",
-            children: jsxDEV8("div", {
-              className: Sidebar.Body(),
-              children: sidebarConfig.map((section, sectionIndex) => jsxDEV8(ConditionalWrapper, {
-                condition: !!section.title,
-                wrapper: (children) => jsxDEV8(SidebarMenu, {
-                  title: section.title || "",
-                  children
-                }, undefined, false, undefined, this),
-                children: section.items.map((item, itemIndex) => jsxDEV8(SidebarItem, {
-                  isActive: pathname === item.href,
-                  title: item.title,
-                  icon: item.icon,
-                  href: item.href
-                }, `item-${itemIndex}`, false, undefined, this))
-              }, `section-${sectionIndex}`, false, undefined, this))
-            }, undefined, false, undefined, this)
-          }, undefined, false, undefined, this)
-        ]
-      }, undefined, true, undefined, this)
-    ]
-  }, undefined, true, undefined, this);
+  return React8.createElement("aside", {
+    className: "sticky top-0 z-[202] h-screen"
+  }, collapsed ? React8.createElement("div", {
+    className: Sidebar.Overlay(),
+    onClick: setCollapsed
+  }) : null, React8.createElement("div", {
+    className: Sidebar({
+      collapsed
+    })
+  }, React8.createElement("div", {
+    className: Sidebar.Header()
+  }, React8.createElement(CompaniesDropdown, {
+    adminNavHeader
+  })), React8.createElement("div", {
+    className: "flex h-full flex-col justify-between"
+  }, React8.createElement("div", {
+    className: Sidebar.Body()
+  }, sidebarConfig.map((section, sectionIndex) => React8.createElement(ConditionalWrapper, {
+    condition: !!section.title,
+    wrapper: (children) => React8.createElement(SidebarMenu, {
+      title: section.title || ""
+    }, children),
+    key: `section-${sectionIndex}`
+  }, section.items.map((item, itemIndex) => React8.createElement(SidebarItem, {
+    isActive: pathname === item.href,
+    title: item.title,
+    icon: item.icon,
+    href: item.href,
+    key: `item-${itemIndex}`
+  }))))))));
 };
 
-// src/navbar/navbar.sty
-import {
-jsxDEV as jsxDEV9
-} from "react/jsx-dev-runtime";
+// src/navbar/darkmodesw
 var Layout = ({ sidebarConfig, adminNavHeader, userDropdownConfig, children }) => {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [sidebarOpen, setSidebarOpen] = React9.useState(false);
   const [_, setLocked] = useLockedBody(false);
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
     setLocked(!sidebarOpen);
   };
-  return jsxDEV9(SidebarContext.Provider, {
+  return React9.createElement(SidebarContext.Provider, {
     value: {
       collapsed: sidebarOpen,
       setCollapsed: handleToggleSidebar
-    },
-    children: jsxDEV9("section", {
-      className: "flex",
-      children: [
-        jsxDEV9(SidebarWrapper2, {
-          sidebarConfig,
-          adminNavHeader
-        }, undefined, false, undefined, this),
-        jsxDEV9(NavbarWrapper, {
-          userDropdownConfig,
-          children
-        }, undefined, false, undefined, this)
-      ]
-    }, undefined, true, undefined, this)
-  }, undefined, false, undefined, this);
+    }
+  }, React9.createElement("section", {
+    className: "flex"
+  }, React9.createElement(SidebarWrapper2, {
+    sidebarConfig,
+    adminNavHeader
+  }), React9.createElement(NavbarWrapper, {
+    userDropdownConfig
+  }, children)));
 };
 
-// src/navbar/navbar.styles.t
+// src/navbar/darkmodeswitch.
+import React10 from "react";
 import {
 Button,
 Spinner,
@@ -393,9 +306,6 @@ TableColumn,
 TableHeader,
 TableRow
 } from "@nextui-org/react";
-import {
-jsxDEV as jsxDEV10
-} from "react/jsx-dev-runtime";
 var TableWrapper = (props) => {
   const {
     columns,
@@ -415,81 +325,59 @@ var TableWrapper = (props) => {
       setSortDescriptor(sortDescriptor2);
     }
   };
-  return jsxDEV10("div", {
-    className: " flex w-full flex-col gap-4",
-    children: [
-      jsxDEV10(Table, {
-        sortDescriptor,
-        onSortChange: (sortDescriptor2) => handleSortChange(sortDescriptor2),
-        "aria-label": "Table for model rows",
-        selectionMode: "single",
-        onRowAction: (key) => linkFunction(key),
-        children: [
-          jsxDEV10(TableHeader, {
-            columns,
-            children: (column) => jsxDEV10(TableColumn, {
-              hideHeader: column.key === "actions",
-              align: column.align === "center" ? "center" : "start",
-              allowsSorting: column.allowsSorting,
-              children: column.label
-            }, column.key, false, undefined, this)
-          }, undefined, false, undefined, this),
-          jsxDEV10(TableBody, {
-            items: items || [],
-            emptyContent: items ? emptyContent : " ",
-            isLoading,
-            loadingContent: jsxDEV10(Spinner, {
-              label: "Loading..."
-            }, undefined, false, undefined, this),
-            children: (item) => jsxDEV10(TableRow, {
-              children: (columnKey) => jsxDEV10(TableCell, {
-                children: renderRow({ item, columnKey })
-              }, undefined, false, undefined, this)
-            }, undefined, false, undefined, this)
-          }, undefined, false, undefined, this)
-        ]
-      }, undefined, true, undefined, this),
-      jsxDEV10("div", {
-        className: "mb-3 mt-3 flex items-center justify-center gap-2",
-        children: [
-          jsxDEV10(Button, {
-            size: "sm",
-            variant: "flat",
-            color: "secondary",
-            isDisabled: pageDescriptor?.page === 1,
-            onPress: () => {
-              if (pageDescriptor && setPageDescriptor) {
-                const page = pageDescriptor.page > 1 ? pageDescriptor.page - 1 : pageDescriptor.page;
-                setPageDescriptor({ ...pageDescriptor, page });
-              }
-            },
-            children: "Previous"
-          }, undefined, false, undefined, this),
-          jsxDEV10("div", {
-            className: "flex items-center text-gray-400",
-            children: pageDescriptor?.page
-          }, undefined, false, undefined, this),
-          jsxDEV10(Button, {
-            size: "sm",
-            variant: "flat",
-            color: "secondary",
-            isDisabled: hasMore === false,
-            onPress: () => {
-              if (pageDescriptor && setPageDescriptor) {
-                const page = pageDescriptor.page + 1;
-                setPageDescriptor({ ...pageDescriptor, page });
-              }
-            },
-            children: "Next"
-          }, undefined, false, undefined, this)
-        ]
-      }, undefined, true, undefined, this)
-    ]
-  }, undefined, true, undefined, this);
+  return React10.createElement("div", {
+    className: " flex w-full flex-col gap-4"
+  }, React10.createElement(Table, {
+    sortDescriptor,
+    onSortChange: (sortDescriptor2) => handleSortChange(sortDescriptor2),
+    "aria-label": "Table for model rows",
+    selectionMode: "single",
+    onRowAction: (key) => linkFunction(key)
+  }, React10.createElement(TableHeader, {
+    columns
+  }, (column) => React10.createElement(TableColumn, {
+    hideHeader: column.key === "actions",
+    align: column.align === "center" ? "center" : "start",
+    allowsSorting: column.allowsSorting,
+    key: column.key
+  }, column.label)), React10.createElement(TableBody, {
+    items: items || [],
+    emptyContent: items ? emptyContent : " ",
+    isLoading,
+    loadingContent: React10.createElement(Spinner, {
+      label: "Loading..."
+    })
+  }, (item) => React10.createElement(TableRow, null, (columnKey) => React10.createElement(TableCell, null, renderRow({ item, columnKey }))))), React10.createElement("div", {
+    className: "mb-3 mt-3 flex items-center justify-center gap-2"
+  }, React10.createElement(Button, {
+    size: "sm",
+    variant: "flat",
+    color: "secondary",
+    isDisabled: pageDescriptor?.page === 1,
+    onPress: () => {
+      if (pageDescriptor && setPageDescriptor) {
+        const page = pageDescriptor.page > 1 ? pageDescriptor.page - 1 : pageDescriptor.page;
+        setPageDescriptor({ ...pageDescriptor, page });
+      }
+    }
+  }, "Previous"), React10.createElement("div", {
+    className: "flex items-center text-gray-400"
+  }, pageDescriptor?.page), React10.createElement(Button, {
+    size: "sm",
+    variant: "flat",
+    color: "secondary",
+    isDisabled: hasMore === false,
+    onPress: () => {
+      if (pageDescriptor && setPageDescriptor) {
+        const page = pageDescriptor.page + 1;
+        setPageDescriptor({ ...pageDescriptor, page });
+      }
+    }
+  }, "Next")));
 };
 
-// src/navbar/navbar.styles.tssx
-import {useState as useState2} from "react";
+// src/navbar/darkmodeswitch.tsx
+import React11, {useState as useState2} from "react";
 function useTableWrapper() {
   const [sortDescriptor, setSortDescriptor] = useState2({
     column: "id",
@@ -500,13 +388,13 @@ function useTableWrapper() {
     pageSize: 50
   });
   const TableWrapperComponent = (props) => {
-    return jsxDEV11(TableWrapper, {
+    return React11.createElement(TableWrapper, {
       ...props,
       sortDescriptor,
       setSortDescriptor,
       pageDescriptor,
       setPageDescriptor
-    }, undefined, false, undefined, this);
+    });
   };
   return {
     TableWrapperComponent,
@@ -516,9 +404,6 @@ function useTableWrapper() {
     setPageDescriptor
   };
 }
-import {
-jsxDEV as jsxDEV11
-} from "react/jsx-dev-runtime";
 export {
   useTableWrapper,
   TableWrapper,

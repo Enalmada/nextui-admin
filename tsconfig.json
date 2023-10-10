@@ -7,7 +7,7 @@
     "types": ["vitest/globals"],
 
     "declaration": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

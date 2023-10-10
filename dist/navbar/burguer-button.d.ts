@@ -1,1 +1,2 @@
-export declare const BurguerButton: () => import("react/jsx-runtime").JSX.Element;
+import React from 'react';
+export declare const BurguerButton: () => React.JSX.Element;

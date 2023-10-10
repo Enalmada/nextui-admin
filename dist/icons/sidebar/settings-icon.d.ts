@@ -1,1 +1,2 @@
-export declare const SettingsIcon: () => import("react/jsx-runtime").JSX.Element;
+import React from "react";
+export declare const SettingsIcon: () => React.JSX.Element;

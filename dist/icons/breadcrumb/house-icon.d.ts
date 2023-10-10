@@ -1,1 +1,2 @@
-export declare const HouseIcon: () => import("react/jsx-runtime").JSX.Element;
+import React from "react";
+export declare const HouseIcon: () => React.JSX.Element;

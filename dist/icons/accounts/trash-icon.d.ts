@@ -1,1 +1,2 @@
-export declare const TrashIcon: () => import("react/jsx-runtime").JSX.Element;
+import React from "react";
+export declare const TrashIcon: () => React.JSX.Element;

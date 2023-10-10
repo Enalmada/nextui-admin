@@ -13,5 +13,5 @@ interface Props {
     sidebarConfig: SidebarSectionConfig[];
     adminNavHeader: AdminNavHeader;
 }
-export declare const SidebarWrapper: ({ sidebarConfig, adminNavHeader }: Props) => import("react/jsx-runtime").JSX.Element;
+export declare const SidebarWrapper: ({ sidebarConfig, adminNavHeader }: Props) => React.JSX.Element;
 export {};

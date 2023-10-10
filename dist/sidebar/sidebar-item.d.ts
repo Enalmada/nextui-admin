@@ -5,5 +5,5 @@ interface Props {
     isActive?: boolean;
     href?: string;
 }
-export declare const SidebarItem: ({ icon, title, isActive, href }: Props) => import("react/jsx-runtime").JSX.Element;
+export declare const SidebarItem: ({ icon, title, isActive, href }: Props) => React.JSX.Element;
 export {};
