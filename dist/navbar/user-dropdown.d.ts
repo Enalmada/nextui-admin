@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import React from 'react';
 export interface UserConfig {
     displayName?: string;
     email?: string;
@@ -13,11 +13,11 @@ export interface DropdownItemConfig {
 }
 export interface UserDropdownConfig {
     user: UserConfig;
-    trigger: ReactNode;
+    trigger: React.ReactElement | string;
     items: DropdownItemConfig[];
 }
 interface Props {
     userDropdownConfig: UserDropdownConfig;
 }
-export declare const UserDropdown: ({ userDropdownConfig }: Props) => import("react/jsx-runtime").JSX.Element;
+export declare const UserDropdown: ({ userDropdownConfig }: Props) => React.JSX.Element;
 export {};

@@ -4,5 +4,5 @@ interface Props {
     children: React.ReactNode;
     userDropdownConfig: UserDropdownConfig;
 }
-export declare const NavbarWrapper: ({ userDropdownConfig, children }: Props) => import("react/jsx-runtime").JSX.Element;
+export declare const NavbarWrapper: ({ userDropdownConfig, children }: Props) => React.JSX.Element;
 export {};

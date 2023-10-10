@@ -1,1 +1,2 @@
-export declare const InfoIcon: () => import("react/jsx-runtime").JSX.Element;
+import React from "react";
+export declare const InfoIcon: () => React.JSX.Element;

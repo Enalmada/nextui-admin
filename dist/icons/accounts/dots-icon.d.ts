@@ -1,1 +1,2 @@
-export declare const DotsIcon: () => import("react/jsx-runtime").JSX.Element;
+import React from "react";
+export declare const DotsIcon: () => React.JSX.Element;

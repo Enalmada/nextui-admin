@@ -1,1 +1,2 @@
-export declare const UsersIcon: () => import("react/jsx-runtime").JSX.Element;
+import React from "react";
+export declare const UsersIcon: () => React.JSX.Element;

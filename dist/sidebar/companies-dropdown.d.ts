@@ -7,5 +7,5 @@ export interface AdminNavHeader {
     name2: string;
     logo: React.ReactNode;
 }
-export declare const CompaniesDropdown: ({ adminNavHeader }: Props) => import("react/jsx-runtime").JSX.Element;
+export declare const CompaniesDropdown: ({ adminNavHeader }: Props) => React.JSX.Element;
 export {};

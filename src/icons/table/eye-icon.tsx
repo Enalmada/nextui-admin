@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface Props {
   size?: number;
   fill?: string;

@@ -1,6 +1,6 @@
 'use client';
 
-import { type ReactNode } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Dropdown,
@@ -28,7 +28,7 @@ export interface DropdownItemConfig {
 
 export interface UserDropdownConfig {
   user: UserConfig;
-  trigger: ReactNode;
+  trigger: React.ReactElement | string;
   items: DropdownItemConfig[];
 }
 

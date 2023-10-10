@@ -1,1 +1,2 @@
-export declare const DarkModeSwitch: () => import("react/jsx-runtime").JSX.Element;
+import React from 'react';
+export declare const DarkModeSwitch: () => React.JSX.Element;

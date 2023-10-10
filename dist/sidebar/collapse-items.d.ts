@@ -4,5 +4,5 @@ interface Props {
     title: string;
     items: string[];
 }
-export declare const CollapseItems: ({ icon, items, title }: Props) => import("react/jsx-runtime").JSX.Element;
+export declare const CollapseItems: ({ icon, items, title }: Props) => React.JSX.Element;
 export {};
