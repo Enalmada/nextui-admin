@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.7
+
+### Patch Changes
+
+- 3c04b7c: fix TypeError: (0 , c.jsxDEV) is not a function
+
 ## 0.0.6
 
 ### Patch Changes
