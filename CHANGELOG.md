@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.8
+
+### Patch Changes
+
+- bb0fad3: switch to @enalmada/next-themes until nonce is fixed
+
 ## 0.0.7
 
 ### Patch Changes
