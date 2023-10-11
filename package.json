@@ -13,11 +13,14 @@
     "test:unit": "vitest",
     "type-check": "bun --bun tsc --noEmit"
   },
+  "dependencies": {
+    "@enalmada/next-themes": "^0.2.4"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@types/node": "^20.8.4",
-    "@types/react": "^18.2.27",
+    "@types/react": "^18.2.28",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "eslint": "^8.51.0",
@@ -29,6 +32,13 @@
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "@nextui-org/react": "^2.1.13",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "next": "^13.5.4",
+    "react": "^18.2.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -49,14 +59,6 @@
   "private": false,
   "publishConfig": {
     "access": "public"
-  },
-  "peerDependencies": {
-    "@nextui-org/react": "^2.1.13",
-    "clsx": "^2.0.0",
-    "framer-motion": "^10.16.4",
-    "next": "^13.5.4",
-    "next-themes": "^0.2.1",
-    "react": "^18.2.0"
   },
   "type": "module"
 }

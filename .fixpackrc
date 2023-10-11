@@ -5,6 +5,7 @@
 		"scripts",
 		"dependencies",
 		"devDependencies",
+		"peerDependencies",
 		"main",
         "types",
 		"author",
