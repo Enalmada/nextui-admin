@@ -1,14 +1,14 @@
-// node_modules/@enalmad
+// src/sidebar/sidebar.s
 import React9 from "react";
 
-// node_modules/@enalmada/n
+// src/sidebar/sidebar.styl
 import {useEffect as useEffect2, useState} from "react";
 
-// node_modules/@enalmada/next-themes/dis
+// src/sidebar/sidebar.styles.tsn.tsxt.ts
 import {useEffect, useLayoutEffect} from "react";
 var useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-// node_modules/@enalmada/n
+// src/sidebar/sidebar.styl
 var useLockedBody = (initialLocked = false) => {
   const [locked, setLocked] = useState(initialLocked);
   useIsomorphicLayoutEffect(() => {
@@ -38,14 +38,14 @@ var useLockedBody = (initialLocked = false) => {
   return [locked, setLocked];
 };
 
-// node_modules/@enalmad
+// src/sidebar/sidebar.s
 import React4 from "react";
 import {Navbar, NavbarContent} from "@nextui-org/react";
 
-// node_modules/@enalmada/next-t
+// src/sidebar/sidebar.styles.ts
 import React from "react";
 
-// node_modules/@enalmada/next-
+// src/sidebar/sidebar.styles.t
 import {createContext, useContext} from "react";
 var SidebarContext = createContext({
   collapsed: false,
@@ -56,7 +56,7 @@ var useSidebarContext = () => {
   return useContext(SidebarContext);
 };
 
-// node_modules/@enalmada/next
+// src/sidebar/sidebar.styles.
 import {tv} from "@nextui-org/react";
 var StyledBurgerButton = tv({
   base: "absolute flex flex-col justify-around w-6 h-6 bg-transparent border-none cursor-pointer padding-0 z-[202] focus:outline-none [&_div]:w-6 [&_div]:h-px [&_div]:bg-default-900 [&_div]:rounded-xl  [&_div]:transition-all  [&_div]:relative  [&_div]:origin-[1px] ",
@@ -67,7 +67,7 @@ var StyledBurgerButton = tv({
   }
 });
 
-// node_modules/@enalmada/next-t
+// src/sidebar/sidebar.styles.ts
 var BurguerButton = () => {
   const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
   return React.createElement("div", {
@@ -76,7 +76,7 @@ var BurguerButton = () => {
   }, React.createElement("div", null), React.createElement("div", null));
 };
 
-// node_modules/@enalmada/next-
+// src/sidebar/sidebar.styles.t
 import React3 from "react";
 import {useRouter} from "next/navigation";
 import {
@@ -87,37 +87,19 @@ DropdownTrigger,
 NavbarItem
 } from "@nextui-org/react";
 
-// node_modules/@enalmada/next-t
+// src/sidebar/sidebar.styles.ts
 import React2 from "react";
-
-// node_modules/@enalmada/next-themes/dist/index.mjs
-import k, {Fragment as U, createContext as _, useCallback as T, useContext as D, useEffect as C, useState as I, useMemo as j, memo as z} from "react";
-var P = ["light", "dark"];
-var L = "(prefers-color-scheme: dark)";
-var J = typeof window > "u";
-var M = _(undefined);
-var V = { setTheme: (e) => {
-}, themes: [] };
-var W = () => D(M) ?? V;
-var q = z(({ forcedTheme: e, storageKey: d, attribute: s, enableSystem: $, enableColorScheme: a, defaultTheme: o, value: n, attrs: p, nonce: f }) => {
-  let y = o === "system", g = (() => s === "class" ? `var d=document.documentElement,c=d.classList;${`c.remove(${p.map((l) => `'${l}'`).join(",")})`};` : `var d=document.documentElement,n='${s}',s='setAttribute';`)(), i = (() => a ? (P.includes(o) ? o : null) ? `if(e==='light'||e==='dark'||!e)d.style.colorScheme=e||'${o}'` : "if(e==='light'||e==='dark')d.style.colorScheme=e" : "")(), m = (c, l = false, v = true) => {
-    let u = n ? n[c] : c, x = l ? c + "|| ''" : `'${u}'`, t = "";
-    return a && v && !l && P.includes(c) && (t += `d.style.colorScheme = '${c}';`), s === "class" ? l || u ? t += `c.add(${x})` : t += "null" : u && (t += `d[s](n,${x})`), t;
-  }, w = (() => e ? `!function(){${g}${m(e)}}()` : $ ? `!function(){try{${g}var e=localStorage.getItem('${d}');if('system'===e||(!e&&${y})){var t='${L}',m=window.matchMedia(t);if(m.media!==t||m.matches){${m("dark")}}else{${m("light")}}}else if(e){${n ? `var x=${JSON.stringify(n)};` : ""}${m(n ? "x[e]" : "e", true)}}${y ? "" : "else{" + m(o, false, false) + "}"}${i}}catch(e){}}()` : `!function(){try{${g}var e=localStorage.getItem('${d}');if(e){${n ? `var x=${JSON.stringify(n)};` : ""}${m(n ? "x[e]" : "e", true)}}else{${m(o, false, false)};}${i}}catch(t){}}();`)();
-  return k.createElement("script", { nonce: typeof window > "u" ? f : "", dangerouslySetInnerHTML: { __html: w } });
-}, () => true);
-
-// node_modules/@enalmada/next-t
+import {useTheme as useNextTheme} from "@enalmada/next-themes";
 import {Switch} from "@nextui-org/react";
 var DarkModeSwitch = () => {
-  const { setTheme, theme } = W();
+  const { setTheme, theme } = useNextTheme();
   return React2.createElement(Switch, {
     isSelected: theme === "dark",
     onValueChange: (e) => setTheme(e ? "dark" : "light")
   });
 };
 
-// node_modules/@enalmada/next-
+// src/sidebar/sidebar.styles.t
 var UserDropdown = ({ userDropdownConfig }) => {
   const router = useRouter();
   const { user, trigger, items } = userDropdownConfig;
@@ -149,7 +131,7 @@ var UserDropdown = ({ userDropdownConfig }) => {
   }, dropdownItems));
 };
 
-// node_modules/@enalmad
+// src/sidebar/sidebar.s
 var NavbarWrapper = ({ userDropdownConfig, children }) => {
   return React4.createElement("div", {
     className: "relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
@@ -171,11 +153,11 @@ var NavbarWrapper = ({ userDropdownConfig, children }) => {
   })))), children);
 };
 
-// node_modules/@enalmada/
+// src/sidebar/sidebar.sty
 import React8 from "react";
 import {usePathname} from "next/navigation";
 
-// node_modules/@enalmada/next-themes
+// src/sidebar/sidebar.styles.tsn.tsx
 import React5 from "react";
 var CompaniesDropdown = ({ adminNavHeader }) => {
   return React5.createElement("div", {
@@ -191,7 +173,7 @@ var CompaniesDropdown = ({ adminNavHeader }) => {
   }, adminNavHeader.name2))));
 };
 
-// node_modules/@enalmada/next-
+// src/sidebar/sidebar.styles.t
 import React6 from "react";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -213,7 +195,7 @@ var SidebarItem = ({ icon, title, isActive, href = "" }) => {
   }, title)));
 };
 
-// node_modules/@enalmada/next-
+// src/sidebar/sidebar.styles.t
 import React7 from "react";
 var SidebarMenu = ({ title, children }) => {
   return React7.createElement("div", {
@@ -223,7 +205,7 @@ var SidebarMenu = ({ title, children }) => {
   }, title), children);
 };
 
-// node_modules/@enalmada/next-t
+// src/sidebar/sidebar.styles.ts
 import {tv as tv2} from "@nextui-org/react";
 var SidebarWrapper = tv2({
   base: "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ",
@@ -252,7 +234,7 @@ var Sidebar = Object.assign(SidebarWrapper, {
   Footer
 });
 
-// node_modules/@enalmada/
+// src/sidebar/sidebar.sty
 var ConditionalWrapper = ({ condition, wrapper, children }) => condition ? wrapper(children) : children;
 var SidebarWrapper2 = ({ sidebarConfig, adminNavHeader }) => {
   const { collapsed, setCollapsed } = useSidebarContext();
@@ -289,10 +271,10 @@ var SidebarWrapper2 = ({ sidebarConfig, adminNavHeader }) => {
   }))))))));
 };
 
-// node_modules/@enalmad
+// src/sidebar/sidebar.s
 var Layout = ({ sidebarConfig, adminNavHeader, userDropdownConfig, children }) => {
   const [sidebarOpen, setSidebarOpen] = React9.useState(false);
-  const [_2, setLocked] = useLockedBody(false);
+  const [_, setLocked] = useLockedBody(false);
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
     setLocked(!sidebarOpen);
@@ -312,7 +294,7 @@ var Layout = ({ sidebarConfig, adminNavHeader, userDropdownConfig, children }) =
   }, children)));
 };
 
-// node_modules/@enalmada/nex
+// src/sidebar/sidebar.styles
 import React10 from "react";
 import {
 Button,
@@ -394,7 +376,7 @@ var TableWrapper = (props) => {
   }, "Next")));
 };
 
-// node_modules/@enalmada/next-t
+// src/sidebar/sidebar.styles.ts
 import React11, {useState as useState2} from "react";
 function useTableWrapper() {
   const [sortDescriptor, setSortDescriptor] = useState2({

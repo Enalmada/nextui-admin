@@ -1,12 +1,13 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "test/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mjs",
+    "**/*.cjs",
     ".lintstagedrc.js",
     "vitest.config.ts",
-    "build.mjs",
+    "build.ts",
     "prettier.config.cjs"
   ],
   "compilerOptions": {
