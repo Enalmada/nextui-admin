@@ -1,14 +1,14 @@
-// src/sidebar/sidebar.s
+// src/navbar/darkmodesw
 import React9 from "react";
 
-// src/sidebar/sidebar.styl
+// src/navbar/darkmodeswitc
 import {useEffect as useEffect2, useState} from "react";
 
-// src/sidebar/sidebar.styles.tsn.tsxt.ts
+// src/navbar/darkmodeswitch.tsxn.tsxt.ts
 import {useEffect, useLayoutEffect} from "react";
 var useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-// src/sidebar/sidebar.styl
+// src/navbar/darkmodeswitc
 var useLockedBody = (initialLocked = false) => {
   const [locked, setLocked] = useState(initialLocked);
   useIsomorphicLayoutEffect(() => {
@@ -38,14 +38,14 @@ var useLockedBody = (initialLocked = false) => {
   return [locked, setLocked];
 };
 
-// src/sidebar/sidebar.s
+// src/navbar/darkmodesw
 import React4 from "react";
 import {Navbar, NavbarContent} from "@nextui-org/react";
 
-// src/sidebar/sidebar.styles.ts
+// src/navbar/darkmodeswitch.tsx
 import React from "react";
 
-// src/sidebar/sidebar.styles.t
+// src/navbar/darkmodeswitch.ts
 import {createContext, useContext} from "react";
 var SidebarContext = createContext({
   collapsed: false,
@@ -56,7 +56,7 @@ var useSidebarContext = () => {
   return useContext(SidebarContext);
 };
 
-// src/sidebar/sidebar.styles.
+// src/navbar/darkmodeswitch.t
 import {tv} from "@nextui-org/react";
 var StyledBurgerButton = tv({
   base: "absolute flex flex-col justify-around w-6 h-6 bg-transparent border-none cursor-pointer padding-0 z-[202] focus:outline-none [&_div]:w-6 [&_div]:h-px [&_div]:bg-default-900 [&_div]:rounded-xl  [&_div]:transition-all  [&_div]:relative  [&_div]:origin-[1px] ",
@@ -67,7 +67,7 @@ var StyledBurgerButton = tv({
   }
 });
 
-// src/sidebar/sidebar.styles.ts
+// src/navbar/darkmodeswitch.tsx
 var BurguerButton = () => {
   const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
   return React.createElement("div", {
@@ -76,7 +76,7 @@ var BurguerButton = () => {
   }, React.createElement("div", null), React.createElement("div", null));
 };
 
-// src/sidebar/sidebar.styles.t
+// src/navbar/darkmodeswitch.ts
 import React3 from "react";
 import {useRouter} from "next/navigation";
 import {
@@ -87,7 +87,7 @@ DropdownTrigger,
 NavbarItem
 } from "@nextui-org/react";
 
-// src/sidebar/sidebar.styles.ts
+// src/navbar/darkmodeswitch.tsx
 import React2 from "react";
 import {useTheme as useNextTheme} from "@enalmada/next-themes";
 import {Switch} from "@nextui-org/react";
@@ -99,7 +99,7 @@ var DarkModeSwitch = () => {
   });
 };
 
-// src/sidebar/sidebar.styles.t
+// src/navbar/darkmodeswitch.ts
 var UserDropdown = ({ userDropdownConfig }) => {
   const router = useRouter();
   const { user, trigger, items } = userDropdownConfig;
@@ -131,7 +131,7 @@ var UserDropdown = ({ userDropdownConfig }) => {
   }, dropdownItems));
 };
 
-// src/sidebar/sidebar.s
+// src/navbar/darkmodesw
 var NavbarWrapper = ({ userDropdownConfig, children }) => {
   return React4.createElement("div", {
     className: "relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
@@ -153,11 +153,11 @@ var NavbarWrapper = ({ userDropdownConfig, children }) => {
   })))), children);
 };
 
-// src/sidebar/sidebar.sty
+// src/navbar/darkmodeswit
 import React8 from "react";
 import {usePathname} from "next/navigation";
 
-// src/sidebar/sidebar.styles.tsn.tsx
+// src/navbar/darkmodeswitch.tsxn.tsx
 import React5 from "react";
 var CompaniesDropdown = ({ adminNavHeader }) => {
   return React5.createElement("div", {
@@ -173,7 +173,7 @@ var CompaniesDropdown = ({ adminNavHeader }) => {
   }, adminNavHeader.name2))));
 };
 
-// src/sidebar/sidebar.styles.t
+// src/navbar/darkmodeswitch.ts
 import React6 from "react";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -195,7 +195,7 @@ var SidebarItem = ({ icon, title, isActive, href = "" }) => {
   }, title)));
 };
 
-// src/sidebar/sidebar.styles.t
+// src/navbar/darkmodeswitch.ts
 import React7 from "react";
 var SidebarMenu = ({ title, children }) => {
   return React7.createElement("div", {
@@ -205,7 +205,7 @@ var SidebarMenu = ({ title, children }) => {
   }, title), children);
 };
 
-// src/sidebar/sidebar.styles.ts
+// src/navbar/darkmodeswitch.tsx
 import {tv as tv2} from "@nextui-org/react";
 var SidebarWrapper = tv2({
   base: "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ",
@@ -234,7 +234,7 @@ var Sidebar = Object.assign(SidebarWrapper, {
   Footer
 });
 
-// src/sidebar/sidebar.sty
+// src/navbar/darkmodeswit
 var ConditionalWrapper = ({ condition, wrapper, children }) => condition ? wrapper(children) : children;
 var SidebarWrapper2 = ({ sidebarConfig, adminNavHeader }) => {
   const { collapsed, setCollapsed } = useSidebarContext();
@@ -271,7 +271,7 @@ var SidebarWrapper2 = ({ sidebarConfig, adminNavHeader }) => {
   }))))))));
 };
 
-// src/sidebar/sidebar.s
+// src/navbar/darkmodesw
 var Layout = ({ sidebarConfig, adminNavHeader, userDropdownConfig, children }) => {
   const [sidebarOpen, setSidebarOpen] = React9.useState(false);
   const [_, setLocked] = useLockedBody(false);
@@ -294,7 +294,7 @@ var Layout = ({ sidebarConfig, adminNavHeader, userDropdownConfig, children }) =
   }, children)));
 };
 
-// src/sidebar/sidebar.styles
+// src/navbar/darkmodeswitch.
 import React10 from "react";
 import {
 Button,
@@ -376,7 +376,7 @@ var TableWrapper = (props) => {
   }, "Next")));
 };
 
-// src/sidebar/sidebar.styles.ts
+// src/navbar/darkmodeswitch.tsx
 import React11, {useState as useState2} from "react";
 function useTableWrapper() {
   const [sortDescriptor, setSortDescriptor] = useState2({
