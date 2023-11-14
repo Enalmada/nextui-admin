@@ -26,7 +26,7 @@
     "@types/react": "18.2.37",
     "@typescript-eslint/eslint-plugin": "6.8.0",
     "@typescript-eslint/parser": "6.8.0",
-    "bun-types": "1.0.6",
+    "bun-types": "1.0.11",
     "cross-env": "7.0.3",
     "eslint": "8.51.0",
     "eslint-config-prettier": "9.0.0",
