@@ -1,30 +1,30 @@
 export declare const SidebarWrapper: import("tailwind-variants").TVReturnType<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, undefined, "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ", import("tailwind-variants/dist/config").TVConfig<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, {
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }>, {
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, undefined, import("tailwind-variants").TVReturnType<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, undefined, "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ", import("tailwind-variants/dist/config").TVConfig<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, {
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }>, unknown, unknown, undefined>>;
 export declare const Overlay: import("tailwind-variants").TVReturnType<import("tailwind-variants").TVVariantsDefault<undefined, "bg-[rgb(15_23_42/0.3)] fixed inset-0 z-[201] opacity-80 transition-opacity md:hidden md:z-auto md:opacity-100"> | {
@@ -51,23 +51,23 @@ export declare const Sidebar: ((props?: ({
     collapsed?: boolean | undefined;
 } & import("tailwind-variants").ClassProp<import("tailwind-variants").ClassValue>) | undefined) => string) & import("tailwind-variants").TVReturnProps<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, undefined, "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ", {
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, undefined, import("tailwind-variants").TVReturnType<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, undefined, "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ", import("tailwind-variants/dist/config").TVConfig<{
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }, {
     collapsed: {
-        true: string;
+        true: "translate-x-0 ml-0 [display:inherit]";
     };
 }>, unknown, unknown, undefined>> & {
     Header: import("tailwind-variants").TVReturnType<import("tailwind-variants").TVVariantsDefault<undefined, "flex gap-8 items-center px-6"> | {

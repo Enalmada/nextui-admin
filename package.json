@@ -12,31 +12,31 @@
     "release": "bun run build && bunx changeset publish",
     "test": "bun run test:unit",
     "test:unit": "cross-env NODE_ENV=test vitest",
-    "type-check": "bun --bun tsc --noEmit"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@enalmada/next-themes": "^0.2.4"
   },
   "devDependencies": {
-    "@changesets/cli": "2.26.2",
+    "@changesets/cli": "2.27.1",
     "@enalmada/bun-externals": "0.0.3",
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
-    "@scaleway/changesets-renovate": "1.3.1",
-    "@types/node": "20.9.1",
-    "@types/react": "18.2.37",
-    "@typescript-eslint/eslint-plugin": "6.8.0",
-    "@typescript-eslint/parser": "6.8.0",
-    "bun-types": "1.0.11",
+    "@scaleway/changesets-renovate": "1.3.2",
+    "@types/node": "20.10.4",
+    "@types/react": "18.2.42",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "bun-types": "1.0.15",
     "cross-env": "7.0.3",
-    "eslint": "8.51.0",
-    "eslint-config-prettier": "9.0.0",
+    "eslint": "8.55.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.0.1",
     "fixpack": "4.0.0",
     "husky": "8.0.3",
-    "lint-staged": "15.1.0",
-    "prettier": "3.0.3",
-    "typescript": "5.2.2",
-    "vitest": "0.34.6"
+    "lint-staged": "15.2.0",
+    "prettier": "3.1.0",
+    "typescript": "5.3.3",
+    "vitest": "1.0.2"
   },
   "peerDependencies": {
     "@nextui-org/react": "^2.1.13",
