@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { type ReactElement, type ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { useSidebarContext } from '../layout/layout-context';
@@ -11,12 +11,21 @@ import { Sidebar } from './sidebar.styles';
 
 interface ConditionalWrapperProps {
   condition: boolean;
-  wrapper: (children: React.ReactNode) => React.ReactNode;
-  children: React.ReactNode;
+  wrapper: (children: ReactNode) => ReactElement;
+  children: ReactNode;
 }
 
-const ConditionalWrapper: React.FC<ConditionalWrapperProps> = ({ condition, wrapper, children }) =>
-  condition ? wrapper(children) : children;
+const ConditionalWrapper: React.FC<ConditionalWrapperProps> = ({
+  condition,
+  wrapper,
+  children,
+}) => {
+  if (children === undefined) {
+    return null;
+  }
+  return condition ? wrapper(children) : <>{children}</>;
+};
+
 interface SidebarItemConfig {
   title: string;
   icon: React.ReactNode;

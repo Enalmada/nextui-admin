@@ -13,5 +13,5 @@ const buildEslintCommand = (filenames) =>
 
 export default {
     [eslintPattern]: [buildEslintCommand, tsc],
-    './package.json': ['npm pkg fix', 'fixpack'],
+    './package.json': ['fixpack'],
 };

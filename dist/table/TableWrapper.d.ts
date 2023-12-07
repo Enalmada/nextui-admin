@@ -10,7 +10,7 @@ export interface RenderRowProps {
 }
 export interface Column {
     key: string;
-    label: string;
+    label: string | React.ReactElement;
     align?: 'center' | 'start' | 'end';
     allowsSorting?: boolean;
 }
