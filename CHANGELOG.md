@@ -1,5 +1,14 @@
 # @enalmada/nextui-admin
 
+## 0.0.9
+
+### Patch Changes
+
+- 1494bc9: column label allows string or node
+- c84d70b: Updated dependency `@types/react` to `18.2.30`.
+- 2070f0d: Updated dependency `lint-staged` to `15.0.2`.
+- cd09171: Updated dependency `@types/react` to `18.2.31`.
+
 ## 0.0.8
 
 ### Patch Changes
