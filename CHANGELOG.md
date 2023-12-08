@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.0.10
+
+### Patch Changes
+
+- 0af185c: fix use client at top
+
 ## 0.0.9
 
 ### Patch Changes
