@@ -9,7 +9,7 @@
     "lint:fix": "eslint . --fix --ext .ts,.tsx,.cjs,.mjs && bun type-check",
     "precommit": "bun lint-staged",
     "prepare": "husky install",
-    "release": "bun run build && bunx changeset publish",
+    "release": "bunx changeset publish",
     "test": "bun run test:unit",
     "test:unit": "cross-env NODE_ENV=test vitest",
     "type-check": "tsc --noEmit"
