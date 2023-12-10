@@ -1,6 +1,6 @@
 'use client';
 
-// sidebarbar/navbar.styles.tsu
+// sidebarbar/navbar.styles.tss
 import React2 from "react";
 import {useRouter} from "next/navigation";
 import {
@@ -11,7 +11,7 @@ DropdownTrigger,
 NavbarItem
 } from "@nextui-org/react";
 
-// sidebarbar/navbar.styles.tsut
+// sidebarbar/navbar.styles.tssx
 import React from "react";
 import {useTheme as useNextTheme} from "@enalmada/next-themes";
 import {Switch} from "@nextui-org/react";
@@ -23,7 +23,7 @@ var DarkModeSwitch = () => {
   });
 };
 
-// sidebarbar/navbar.styles.tsu
+// sidebarbar/navbar.styles.tss
 
 var UserDropdown = ({ userDropdownConfig }) => {
   const router = useRouter();

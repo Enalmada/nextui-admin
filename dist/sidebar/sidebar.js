@@ -4,7 +4,7 @@
 import React4 from "react";
 import {usePathname} from "next/navigation";
 
-// sidebarbar/navbar.styles.tsu
+// sidebarbar/navbar.styles.tss
 import {createContext, useContext} from "react";
 var SidebarContext = createContext({
   collapsed: false,
@@ -15,7 +15,7 @@ var useSidebarContext = () => {
   return useContext(SidebarContext);
 };
 
-// sidebarbar/navbar.styles.tsutEffec
+// sidebarbar/navbar.styles.tssxEffec
 import React from "react";
 var CompaniesDropdown = ({ adminNavHeader }) => {
   return React.createElement("div", {
@@ -31,7 +31,7 @@ var CompaniesDropdown = ({ adminNavHeader }) => {
   }, adminNavHeader.name2))));
 };
 
-// sidebarbar/navbar.styles.tsu
+// sidebarbar/navbar.styles.tss
 import React2 from "react";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -53,7 +53,7 @@ var SidebarItem = ({ icon, title, isActive, href = "" }) => {
   }, title)));
 };
 
-// sidebarbar/navbar.styles.tsu
+// sidebarbar/navbar.styles.tss
 import React3 from "react";
 var SidebarMenu = ({ title, children }) => {
   return React3.createElement("div", {
@@ -63,7 +63,7 @@ var SidebarMenu = ({ title, children }) => {
   }, title), children);
 };
 
-// sidebarbar/navbar.styles.tsut
+// sidebarbar/navbar.styles.tssx
 import {tv} from "@nextui-org/react";
 var SidebarWrapper = tv({
   base: "bg-background transition-transform h-full fixed -translate-x-full w-64 shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0 ",
