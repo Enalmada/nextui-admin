@@ -1,36 +1,31 @@
 import React from 'react';
-import { type SortDescriptor } from '@nextui-org/react';
+import { type TableColumnProps as NextUITableColumnProps, type TableProps as NextUITableProps, type SortDescriptor } from '@nextui-org/react';
+import { type TableBodyProps } from '@nextui-org/table/dist/base/table-body';
 export interface PageDescriptor {
     page: number;
     pageSize: number;
 }
-export interface RenderRowProps {
-    item: NonNullable<unknown>;
-    columnKey: string | React.Key;
-}
-export interface Column {
-    key: string;
-    label: string | React.ReactElement;
-    align?: 'center' | 'start' | 'end';
-    allowsSorting?: boolean;
-}
 type SetSortDescriptor = (sortDescriptor: SortDescriptor) => void;
 type SetPageDescriptor = (pageDescriptor: PageDescriptor) => void;
-export interface TableWrapperProps<T> {
-    sortDescriptor?: SortDescriptor;
+export interface TableColumnProps<T> extends Omit<NextUITableColumnProps<T>, 'children'> {
+    key: string;
+    header?: string | React.ReactElement;
+    renderCell?: (item: T) => React.ReactNode;
+}
+export interface TableProps extends NextUITableProps {
     setSortDescriptor?: SetSortDescriptor;
-    columns: Column[];
-    items: T[] | undefined;
-    renderRow: (props: {
-        item: T;
-        columnKey: string | React.Key;
-    }) => React.ReactNode;
-    emptyContent?: string;
+    linkFunction: (key: React.Key) => void;
+}
+export interface PaginationProps {
     pageDescriptor?: PageDescriptor;
     setPageDescriptor?: SetPageDescriptor;
     hasMore?: boolean;
-    isLoading?: boolean;
-    linkFunction: (key: React.Key) => void;
+}
+export interface TableWrapperProps<T> {
+    tableProps: TableProps;
+    columnProps: TableColumnProps<T>[];
+    bodyProps: TableBodyProps<T>;
+    paginationProps: PaginationProps;
 }
 export declare const TableWrapper: <T extends unknown>(props: TableWrapperProps<T>) => React.ReactElement;
 export {};

@@ -18,10 +18,16 @@ export function useTableWrapper<T>() {
     return (
       <TableWrapper<T>
         {...props}
-        sortDescriptor={sortDescriptor}
-        setSortDescriptor={setSortDescriptor}
-        pageDescriptor={pageDescriptor}
-        setPageDescriptor={setPageDescriptor}
+        paginationProps={{
+          pageDescriptor: pageDescriptor,
+          setPageDescriptor: setPageDescriptor,
+          hasMore: props.paginationProps.hasMore,
+        }}
+        tableProps={{
+          ...props.tableProps,
+          sortDescriptor: sortDescriptor,
+          setSortDescriptor: setSortDescriptor,
+        }}
       />
     );
   };

@@ -6,7 +6,7 @@ import React3 from "react";
 // sidebarbar/navbar.styles
 import {useEffect as useEffect2, useState} from "react";
 
-// sidebarbar/navbar.styles.tsutEffect.ts
+// sidebarbar/navbar.styles.tssxEffect.ts
 import {useEffect, useLayoutEffect} from "react";
 var useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -44,10 +44,10 @@ var useLockedBody = (initialLocked = false) => {
 import React2 from "react";
 import {Navbar, NavbarContent} from "@nextui-org/react";
 
-// sidebarbar/navbar.styles.tsut
+// sidebarbar/navbar.styles.tssx
 import React from "react";
 
-// sidebarbar/navbar.styles.tsu
+// sidebarbar/navbar.styles.tss
 import {createContext, useContext} from "react";
 var SidebarContext = createContext({
   collapsed: false,
@@ -69,7 +69,7 @@ var StyledBurgerButton = tv({
   }
 });
 
-// sidebarbar/navbar.styles.tsut
+// sidebarbar/navbar.styles.tssx
 var BurguerButton = () => {
   const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
   return React.createElement("div", {
