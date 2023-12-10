@@ -3,76 +3,40 @@ title: Table
 description: A guide how to use this module.
 ---
 
-
-Create a RenderTable that will define columns and function to render each row.
+Create an object that will define columns, header, and cell rendering.
 
 Example:
 ```tsx
-// RenderTable.tsx
-import React, { type ReactNode } from 'react';
+// RenderRows.tsx
+import React from 'react';
 import { TaskStatus, type Task } from '@/client/gql/generated/graphql';
+import { type TableColumnProps } from '@enalmada/nextui-admin';
 import { Chip, Tooltip } from '@nextui-org/react';
-import { type Column, type RenderRowProps } from '@enalmada/nextui-admin';
 import { BiEditAlt as EditIcon } from 'react-icons/bi';
 
-interface TaskRenderRowProps extends RenderRowProps {
-  item: Task;
-}
-
-export const columns: Column[] = [
-  { key: 'id', label: 'ID', allowsSorting: true },
-  { key: 'title', label: 'Title', allowsSorting: true },
-  { key: 'description', label: 'Description' },
-  { key: 'status', label: 'Status', allowsSorting: true },
-  { key: 'dueDate', label: 'Due Date', allowsSorting: true },
-];
-
-export const renderTable = ({ item: task, columnKey }: TaskRenderRowProps): ReactNode => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const cellValue = task[columnKey];
-
-  switch (columnKey) {
-    case 'status':
-      return (
-        <Chip
-          size="sm"
-          variant="flat"
-          color={task.status === TaskStatus.Completed ? 'success' : 'primary'}
-        >
-          <span className="text-xs capitalize">{task.status}</span>
-        </Chip>
-      );
-
-    case 'auditing':
-      return (
-        <>
-          <div>Created {new Date(task.createdAt).toLocaleString()}</div>
-          <div>Updated {new Date(task.updatedAt).toLocaleString()}</div>
-          <div>Version {task.version}</div>
-        </>
-      );
-
-    case 'actions':
-      return (
-        <div className="flex items-end gap-4 ">
-          <div>
-            <Tooltip content="Edit" color="secondary">
-              <button onClick={() => console.log('Edit', task.id)}>
-                <EditIcon size={20} fill="#979797" />
-              </button>
-            </Tooltip>
-          </div>
-        </div>
-      );
-    default:
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-      return cellValue;
-  }
+export const columnProps: TableColumnProps<Task>[] = [
+    { key: 'id', header: 'ID', allowsSorting: true },
+    { key: 'title', header: 'Title', allowsSorting: true },
+    { key: 'description', header: 'Description' },
+    {
+        key: 'status',
+        header: 'Status',
+        allowsSorting: true,
+        renderCell: (task: Task) => (
+            <Chip
+                size="sm"
+                variant="flat"
+                color={task.status === TaskStatus.Completed ? 'success' : 'primary'}
+            >
+                <span className="text-xs capitalize">{task.status}</span>
+            </Chip>
+        ),
+    },
+  ]
 };
 ```
 
-Create a component with the table and populate it with configuration.
+Create a component with the table and populate it with configuration.  The configuration parameters extend nextui table parameters.
 ```tsx
 // AdminTaskListTable.tsx
 'use client';
@@ -82,24 +46,29 @@ import { useRouter } from 'next/navigation';
 import { Button, InputControlled } from '@/client/ui';
 import { useTableWrapper } from '@enalmada/nextui-admin';
 
-import { columns, renderTable } from './RenderTable';
+import { columnProps } from './RenderRows';
 
-export const TaskList = () => {
+export const TaskTable = () => {
   const router = useRouter();
 
   const { TableWrapperComponent, sortDescriptor, pageDescriptor } = useTableWrapper<Task>();
     
   return (
       <div className="mx-auto w-full max-w-[95rem]">
-        <TableWrapperComponent
-          columns={columns}
-          items={items || undefined}
-          renderRow={renderTable}
-          emptyContent={'No rows to display.'}
-          hasMore={true}
-          isLoading={false}
-          linkFunction={(id: React.Key) => router.push(`/admin/tasks/${id}`)}
-        />
+          <TableWrapperComponent
+              tableProps={{
+                  linkFunction: (id: React.Key) => router.push(`/admin/users/${id}`),
+              }}
+              columnProps={columnProps}
+              bodyProps={{
+                  items: items || undefined,
+                  emptyContent: 'No rows to display.',
+                  isLoading: false,
+              }}
+              paginationProps={{
+                  hasMore: dataQuery?.usersPage?.hasMore,
+              }}
+          />
       </div>
   );
 };
