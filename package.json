@@ -1,6 +1,6 @@
 {
   "name": "@enalmada/nextui-admin",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "scripts": {
     "build": "rm -rf dist && bun build.ts && bun run build:declaration",
     "build:declaration": "tsc --emitDeclarationOnly",
