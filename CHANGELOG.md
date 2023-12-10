@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.1.0
+
+### Minor Changes
+
+- 4935d8e: extend nextui table types
+
 ## 0.0.10
 
 ### Patch Changes
