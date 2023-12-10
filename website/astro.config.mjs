@@ -2,6 +2,7 @@ import prefetch from '@astrojs/prefetch';
 import react from '@astrojs/react';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
@@ -9,7 +10,8 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'nextui-admin',
-      defaultLocale: 'root', // optional
+      defaultLocale: 'root',
+      // optional
       locales: {
         root: {
           label: 'English',
@@ -55,4 +57,6 @@ export default defineConfig({
     }),
     prefetch(),
   ],
+  output: 'server',
+  adapter: vercel(),
 });
