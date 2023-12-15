@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.1.1
+
+### Patch Changes
+
+- 5d3e5ae: updated build process
+
 ## 0.1.0
 
 ### Minor Changes
