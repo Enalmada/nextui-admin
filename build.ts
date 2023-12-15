@@ -1,11 +1,11 @@
 /// <reference types="bun-types" />
 
-import { bunBuild, getSourceFiles } from '@enalmada/bun-externals';
-
 import {
+  bunBuild,
+  getSourceFiles,
   prependDirectiveToBuiltFiles,
   removeBadClientStringFromFiles,
-} from './prependClientDirective';
+} from '@enalmada/bun-externals';
 
 async function buildWithExternals(): Promise<void> {
   const entrypoints = await getSourceFiles();
