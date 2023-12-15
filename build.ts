@@ -1,6 +1,6 @@
 /// <reference types="bun-types" />
 
-import getExternalDependencies, { bunBuild } from '@enalmada/bun-externals';
+import { bunBuild, getSourceFiles } from '@enalmada/bun-externals';
 
 import {
   prependDirectiveToBuiltFiles,
@@ -8,23 +8,13 @@ import {
 } from './prependClientDirective';
 
 async function buildWithExternals(): Promise<void> {
-  const externalDeps = await getExternalDependencies();
+  const entrypoints = await getSourceFiles();
 
   await bunBuild({
-    entrypoints: [
-      './src/index.ts',
-      './src/layout/layout.tsx',
-      './src/navbar/user-dropdown.tsx',
-      './src/sidebar/sidebar.tsx',
-    ],
+    entrypoints,
     outdir: './dist',
     target: 'node',
-    external: [
-      ...externalDeps,
-      './src/layout/layout',
-      './src/navbar/user-dropdown',
-      './src/sidebar/sidebar',
-    ],
+    external: ['*'],
     root: './src',
   });
 

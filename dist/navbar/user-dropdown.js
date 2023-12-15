@@ -1,7 +1,6 @@
 'use client';
 
-// sidebarbar/navbar.styles.tss
-import React2 from "react";
+// src/navbar/user-dropdown.tsx
 import {useRouter} from "next/navigation";
 import {
 Dropdown,
@@ -10,50 +9,55 @@ DropdownMenu,
 DropdownTrigger,
 NavbarItem
 } from "@nextui-org/react";
-
-// sidebarbar/navbar.styles.tssx
-import React from "react";
-import {useTheme as useNextTheme} from "@enalmada/next-themes";
-import {Switch} from "@nextui-org/react";
-var DarkModeSwitch = () => {
-  const { setTheme, theme } = useNextTheme();
-  return React.createElement(Switch, {
-    isSelected: theme === "dark",
-    onValueChange: (e) => setTheme(e ? "dark" : "light")
-  });
-};
-
-// sidebarbar/navbar.styles.tss
+import {DarkModeSwitch} from "./darkmodeswitch";
+import {
+jsxDEV
+} from "react/jsx-dev-runtime";
 
 var UserDropdown = ({ userDropdownConfig }) => {
   const router = useRouter();
   const { user, trigger, items } = userDropdownConfig;
   const dropdownItems = items.map((item) => {
     if (item.isSpecial) {
-      return React2.createElement(DropdownItem, {
-        key: item.key,
+      return jsxDEV(DropdownItem, {
         className: "h-14 gap-2",
-        textValue: `Signed in as: ${user.email}`
-      }, React2.createElement("p", {
-        className: "font-semibold"
-      }, "Signed in as"), React2.createElement("p", {
-        className: "font-semibold"
-      }, user.email));
+        textValue: `Signed in as: ${user.email}`,
+        children: [
+          jsxDEV("p", {
+            className: "font-semibold",
+            children: "Signed in as"
+          }, undefined, false, undefined, this),
+          jsxDEV("p", {
+            className: "font-semibold",
+            children: user.email
+          }, undefined, false, undefined, this)
+        ]
+      }, item.key, true, undefined, this);
     }
-    return React2.createElement(DropdownItem, {
-      key: item.key,
-      color: item.color
-    }, item.label);
+    return jsxDEV(DropdownItem, {
+      color: item.color,
+      children: item.label
+    }, item.key, false, undefined, this);
   });
-  dropdownItems.push(React2.createElement(DropdownItem, {
-    key: "switch"
-  }, React2.createElement(DarkModeSwitch, null)));
-  return React2.createElement(Dropdown, null, React2.createElement(NavbarItem, null, React2.createElement(DropdownTrigger, null, trigger)), React2.createElement(DropdownMenu, {
-    "aria-label": "User menu actions",
-    onAction: (key) => {
-      router.push(items.find((item) => item.key === key)?.href || "/");
-    }
-  }, dropdownItems));
+  dropdownItems.push(jsxDEV(DropdownItem, {
+    children: jsxDEV(DarkModeSwitch, {}, undefined, false, undefined, this)
+  }, "switch", false, undefined, this));
+  return jsxDEV(Dropdown, {
+    children: [
+      jsxDEV(NavbarItem, {
+        children: jsxDEV(DropdownTrigger, {
+          children: trigger
+        }, undefined, false, undefined, this)
+      }, undefined, false, undefined, this),
+      jsxDEV(DropdownMenu, {
+        "aria-label": "User menu actions",
+        onAction: (key) => {
+          router.push(items.find((item) => item.key === key)?.href || "/");
+        },
+        children: dropdownItems
+      }, undefined, false, undefined, this)
+    ]
+  }, undefined, true, undefined, this);
 };
 export {
   UserDropdown
