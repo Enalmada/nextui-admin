@@ -10,6 +10,8 @@ It doesn't add modularization for every possible spot.  Feel free to improve it 
 ## Getting Started
 Read the [documentation](https://nextui-admin.vercel.app/guides/getting-started)
 
+See module in use in [nextjs-boilerplate](https://github.com/Enalmada/nextjs-boilerplate)
+
 ## TODO
 [ ] add slots across sidebar and top nav for arbitrary components
 [ ] remove next as a dependency (Image, Router used sidebar)
