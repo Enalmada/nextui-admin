@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.1.2
+
+### Patch Changes
+
+- d7584aa: Updated dependency `next` to `^13.5.4 || ^14.0.0`.
+
 ## 0.1.1
 
 ### Patch Changes
