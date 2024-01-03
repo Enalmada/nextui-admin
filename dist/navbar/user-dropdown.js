@@ -35,11 +35,13 @@ var UserDropdown = ({ userDropdownConfig }) => {
       }, item.key, true, undefined, this);
     }
     return jsxDEV(DropdownItem, {
-      color: item.color,
+      color: item.color || "default",
+      textValue: item.label,
       children: item.label
     }, item.key, false, undefined, this);
   });
   dropdownItems.push(jsxDEV(DropdownItem, {
+    textValue: "Dark Mode Switch",
     children: jsxDEV(DarkModeSwitch, {}, undefined, false, undefined, this)
   }, "switch", false, undefined, this));
   return jsxDEV(Dropdown, {
