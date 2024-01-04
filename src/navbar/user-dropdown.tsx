@@ -54,7 +54,7 @@ export const UserDropdown = ({ userDropdownConfig }: Props) => {
       );
     }
     return (
-      <DropdownItem key={item.key} color={item.color}>
+      <DropdownItem key={item.key} color={item.color || 'default'} textValue={item.label}>
         {item.label}
       </DropdownItem>
     );
@@ -62,7 +62,7 @@ export const UserDropdown = ({ userDropdownConfig }: Props) => {
 
   // Add the DarkModeSwitch as another DropdownItem
   dropdownItems.push(
-    <DropdownItem key="switch">
+    <DropdownItem key="switch" textValue="Dark Mode Switch">
       <DarkModeSwitch />
     </DropdownItem>
   );

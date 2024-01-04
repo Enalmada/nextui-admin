@@ -3,15 +3,25 @@ import { type SortDescriptor } from '@nextui-org/react';
 
 import { TableWrapper, type PageDescriptor, type TableWrapperProps } from './TableWrapper';
 
-export function useTableWrapper<T>() {
+export interface UseTableWrapperParams {
+  defaultSortDescriptor?: SortDescriptor;
+  defaultPageDescriptor?: PageDescriptor;
+}
+
+export function useTableWrapper<T>({
+  defaultSortDescriptor,
+  defaultPageDescriptor,
+}: UseTableWrapperParams = {}) {
   const [sortDescriptor, setSortDescriptor] = useState<SortDescriptor>({
     column: 'id',
     direction: 'descending',
+    ...defaultSortDescriptor,
   });
 
   const [pageDescriptor, setPageDescriptor] = useState<PageDescriptor>({
     page: 1,
-    pageSize: 50,
+    pageSize: 15,
+    ...defaultPageDescriptor,
   });
 
   const TableWrapperComponent: React.FC<TableWrapperProps<T>> = (props) => {

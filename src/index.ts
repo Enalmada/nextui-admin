@@ -9,7 +9,7 @@ import {
 import { type AdminNavHeader } from './sidebar/companies-dropdown';
 import { type SidebarSectionConfig } from './sidebar/sidebar';
 import { TableWrapper, type PageDescriptor, type TableColumnProps } from './table/TableWrapper';
-import { useTableWrapper } from './table/useTableWrapper';
+import { useTableWrapper, type UseTableWrapperParams } from './table/useTableWrapper';
 
 export { Layout, TableWrapper, useTableWrapper };
 
@@ -22,4 +22,5 @@ export type {
   PageDescriptor,
   SortDescriptor,
   TableColumnProps,
+  UseTableWrapperParams,
 };
