@@ -1,5 +1,12 @@
 # @enalmada/nextui-admin
 
+## 0.1.3
+
+### Patch Changes
+
+- 3bc9495: configurable sort and page descriptors
+- 3bc9495: fix avatar dropdown missing textValue
+
 ## 0.1.2
 
 ### Patch Changes
