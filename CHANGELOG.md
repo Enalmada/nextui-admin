@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.1.4
+
+### Patch Changes
+
+- 342fb39: table header default
+
 ## 0.1.3
 
 ### Patch Changes
