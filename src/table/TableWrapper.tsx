@@ -13,6 +13,7 @@ import {
   type SortDescriptor,
 } from '@nextui-org/react';
 import { type TableBodyProps } from '@nextui-org/table/dist/base/table-body';
+import { capitalCase } from 'change-case';
 
 export interface PageDescriptor {
   page: number;
@@ -24,7 +25,7 @@ type SetPageDescriptor = (pageDescriptor: PageDescriptor) => void;
 
 export interface TableColumnProps<T> extends Omit<NextUITableColumnProps<T>, 'children'> {
   key: string;
-  header?: string | React.ReactElement;
+  header?: string | React.ReactElement | null;
   renderCell?: (item: T) => React.ReactNode;
 }
 
@@ -78,16 +79,15 @@ export const TableWrapper = <T extends unknown>(
         onRowAction={(key) => tableProps.linkFunction(key)}
       >
         <TableHeader columns={columnProps}>
-          {(column) => (
-            <TableColumn
-              {...columnProps}
-              key={column.key}
-              hideHeader={column.key === 'actions'}
-              align={column.align || 'start'}
-            >
-              {column.header || column.key}
-            </TableColumn>
-          )}
+          {(column) => {
+            const header = column.header === undefined ? capitalCase(column.key) : column.header;
+
+            return (
+              <TableColumn {...columnProps} key={column.key} align={column.align || 'start'}>
+                {header}
+              </TableColumn>
+            );
+          }}
         </TableHeader>
         <TableBody
           {...bodyProps}

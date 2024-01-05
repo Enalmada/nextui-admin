@@ -6,4 +6,4 @@ import { type SidebarSectionConfig } from './sidebar/sidebar';
 import { TableWrapper, type PageDescriptor, type TableColumnProps } from './table/TableWrapper';
 import { useTableWrapper, type UseTableWrapperParams } from './table/useTableWrapper';
 export { Layout, TableWrapper, useTableWrapper };
-export type { SidebarSectionConfig, AdminNavHeader, UserDropdownConfig, DropdownItemConfig, UserConfig, PageDescriptor, SortDescriptor, TableColumnProps, UseTableWrapperParams };
+export type { SidebarSectionConfig, AdminNavHeader, UserDropdownConfig, DropdownItemConfig, UserConfig, PageDescriptor, SortDescriptor, TableColumnProps, UseTableWrapperParams, };

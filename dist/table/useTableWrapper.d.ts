@@ -5,7 +5,7 @@ export interface UseTableWrapperParams {
     defaultSortDescriptor?: SortDescriptor;
     defaultPageDescriptor?: PageDescriptor;
 }
-export declare function useTableWrapper<T>({ defaultSortDescriptor, defaultPageDescriptor }?: UseTableWrapperParams): {
+export declare function useTableWrapper<T>({ defaultSortDescriptor, defaultPageDescriptor, }?: UseTableWrapperParams): {
     TableWrapperComponent: React.FC<TableWrapperProps<T>>;
     sortDescriptor: SortDescriptor;
     setSortDescriptor: React.Dispatch<React.SetStateAction<SortDescriptor>>;
