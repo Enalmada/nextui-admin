@@ -14,6 +14,8 @@ Example layout
 // layout.tsx
 import React from 'react';
 import { type User } from '@/client/gql/generated/graphql';
+import gravatarUrl from 'gravatar-url';
+
 import {
     Layout,
     type AdminNavHeader,
@@ -101,7 +103,7 @@ export default function AdminLayout({ me, children }: Props) {
     const user: UserConfig = {
         displayName: me?.name || 'unavailable',
         email: me?.email || 'unavailable',
-        photoURL: 'https://example.com/photo.jpg',
+        photoURL: gravatarUrl(me?.email || '', { default: 'mp' }),
     };
 
   const trigger: React.ReactNode = (

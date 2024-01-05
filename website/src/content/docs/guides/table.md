@@ -4,6 +4,8 @@ description: A guide how to use this module.
 ---
 
 Create an object that will define columns, header, and cell rendering.
+Notes:
+- header will default to [capital case](https://www.npmjs.com/package/change-case) if undefined.  null will disable header
 
 Example:
 ```tsx

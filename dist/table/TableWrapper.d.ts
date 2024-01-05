@@ -9,7 +9,7 @@ type SetSortDescriptor = (sortDescriptor: SortDescriptor) => void;
 type SetPageDescriptor = (pageDescriptor: PageDescriptor) => void;
 export interface TableColumnProps<T> extends Omit<NextUITableColumnProps<T>, 'children'> {
     key: string;
-    header?: string | React.ReactElement;
+    header?: string | React.ReactElement | null;
     renderCell?: (item: T) => React.ReactNode;
 }
 export interface TableProps extends NextUITableProps {

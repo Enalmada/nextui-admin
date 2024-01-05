@@ -10,6 +10,7 @@ TableColumn,
 TableHeader,
 TableRow
 } from "@nextui-org/react";
+import {capitalCase} from "change-case";
 import {
 jsxDEV
 } from "react/jsx-dev-runtime";
@@ -42,12 +43,14 @@ var TableWrapper = (props) => {
         children: [
           jsxDEV(TableHeader, {
             columns: columnProps,
-            children: (column) => createElement(TableColumn, {
-              ...columnProps,
-              key: column.key,
-              hideHeader: column.key === "actions",
-              align: column.align || "start"
-            }, column.header || column.key)
+            children: (column) => {
+              const header = column.header === undefined ? capitalCase(column.key) : column.header;
+              return createElement(TableColumn, {
+                ...columnProps,
+                key: column.key,
+                align: column.align || "start"
+              }, header);
+            }
           }, undefined, false, undefined, this),
           jsxDEV(TableBody, {
             ...bodyProps,

@@ -1,7 +1,10 @@
 // src/table/useTableWrapper.tsx
 import {useState} from "react";
 import {TableWrapper as TableWrapper2} from "./TableWrapper";
-function useTableWrapper({ defaultSortDescriptor, defaultPageDescriptor } = {}) {
+function useTableWrapper({
+  defaultSortDescriptor,
+  defaultPageDescriptor
+} = {}) {
   const [sortDescriptor, setSortDescriptor] = useState({
     column: "id",
     direction: "descending",
