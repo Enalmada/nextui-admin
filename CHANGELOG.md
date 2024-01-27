@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.1.5
+
+### Patch Changes
+
+- fedc3ae: fix table to allow dot notation
+
 ## 0.1.4
 
 ### Patch Changes
