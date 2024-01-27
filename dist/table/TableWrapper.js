@@ -11,6 +11,11 @@ TableHeader,
 TableRow
 } from "@nextui-org/react";
 import {capitalCase} from "change-case";
+var getNestedProperty = function(obj, key) {
+  return key.split(".").reduce((o, x) => {
+    return typeof o === "undefined" || o === null ? o : o[x];
+  }, obj);
+};
 import {
 jsxDEV
 } from "react/jsx-dev-runtime";
@@ -69,7 +74,7 @@ var TableWrapper = (props) => {
                   }, undefined, false, undefined, this);
                 }
                 return jsxDEV(TableCell, {
-                  children: item[columnKey]
+                  children: getNestedProperty(item, columnKey)
                 }, undefined, false, undefined, this);
               }
             }, undefined, false, undefined, this)
