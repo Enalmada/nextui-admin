@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any,@typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access */
 import React from 'react';
 import {
   Button,
@@ -45,6 +46,12 @@ export interface TableWrapperProps<T> {
   columnProps: TableColumnProps<T>[];
   bodyProps: TableBodyProps<T>;
   paginationProps: PaginationProps;
+}
+
+function getNestedProperty(obj: Record<string, any>, key: string): any {
+  return key.split('.').reduce((o: any, x: string) => {
+    return typeof o === 'undefined' || o === null ? o : o[x];
+  }, obj);
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-constraint
@@ -110,7 +117,9 @@ export const TableWrapper = <T extends unknown>(
 
                 // Default fallback if no render method or columnProp not found
                 return (
-                  <TableCell>{(item as Record<string, string>)[columnKey as string]}</TableCell>
+                  <TableCell>
+                    {getNestedProperty(item as Record<string, any>, columnKey as string)}
+                  </TableCell>
                 );
               }}
             </TableRow>
