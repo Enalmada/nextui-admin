@@ -36,7 +36,7 @@
     "lint-staged": "15.2.7",
     "prettier": "3.3.3",
     "typescript": "5.5.4",
-    "vitest": "2.0.4"
+    "vitest": "2.0.5"
   },
   "peerDependencies": {
     "@nextui-org/react": "^2.1.13",
