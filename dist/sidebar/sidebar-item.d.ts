@@ -1,7 +1,8 @@
-import React from 'react';
+import type { ReactNode } from "react";
+import React from "react";
 interface Props {
     title: string;
-    icon: React.ReactNode;
+    icon: ReactNode;
     isActive?: boolean;
     href?: string;
 }

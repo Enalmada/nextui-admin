@@ -1,8 +1,9 @@
-import React from 'react';
-import { type AdminNavHeader } from './companies-dropdown';
+import type { ReactNode } from "react";
+import React from "react";
+import { type AdminNavHeader } from "./companies-dropdown";
 interface SidebarItemConfig {
     title: string;
-    icon: React.ReactNode;
+    icon: ReactNode;
     href: string;
 }
 export interface SidebarSectionConfig {

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 interface SidebarContext {
     collapsed: boolean;
     setCollapsed: () => void;

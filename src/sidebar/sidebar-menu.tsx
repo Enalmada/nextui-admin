@@ -1,15 +1,16 @@
-import React from 'react';
+import type { ReactNode } from "react";
+import React from "react";
 
 interface Props {
-  title: string;
-  children?: React.ReactNode;
+	title: string;
+	children?: ReactNode;
 }
 
 export const SidebarMenu = ({ title, children }: Props) => {
-  return (
-    <div className="flex flex-col gap-2">
-      <span className="text-xs font-normal ">{title}</span>
-      {children}
-    </div>
-  );
+	return (
+		<div className="flex flex-col gap-2">
+			<span className="text-xs font-normal ">{title}</span>
+			{children}
+		</div>
+	);
 };

@@ -1,9 +1,9 @@
 // src/hooks/useBodyLock.ts
-import {useEffect, useState} from "react";
-import {useIsomorphicLayoutEffect as useIsomorphicLayoutEffect2} from "./useIsomorphicLayoutEffect";
+import { useEffect, useState } from "react";
+import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 var useLockedBody = (initialLocked = false) => {
   const [locked, setLocked] = useState(initialLocked);
-  useIsomorphicLayoutEffect2(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!locked) {
       return;
     }
