@@ -1,5 +1,12 @@
 # @enalmada/nextui-admin
 
+## 0.1.6
+
+### Patch Changes
+
+- 387b761: dependency updates
+- 387b761: eslint to biome migration
+
 ## 0.1.5
 
 ### Patch Changes
