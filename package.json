@@ -1,6 +1,6 @@
 {
 	"name": "@enalmada/nextui-admin",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"scripts": {
 		"build": "bun build:clear && bun build:script && bun build:declaration",
 		"build:clear": "rm -rf dist",
@@ -44,7 +44,9 @@
 	"types": "dist/index.d.ts",
 	"author": "Adam Lane",
 	"description": "nextui admin components",
-	"keywords": ["nextui admin"],
+	"keywords": [
+		"nextui admin"
+	],
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/Enalmada/nextui-admin/issues"
@@ -60,5 +62,7 @@
 	},
 	"type": "module",
 	"packageManager": "bun@1.1.31",
-	"trustedDependencies": ["@biomejs/biome"]
+	"trustedDependencies": [
+		"@biomejs/biome"
+	]
 }
