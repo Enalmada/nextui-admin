@@ -1,4 +1,5 @@
-import React from 'react';
+import type { ReactElement } from "react";
+import React from "react";
 export interface UserConfig {
     displayName?: string;
     email?: string;
@@ -8,12 +9,12 @@ export interface DropdownItemConfig {
     key: string;
     label: string;
     href?: string;
-    color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | undefined;
+    color?: "default" | "primary" | "secondary" | "success" | "warning" | "danger" | undefined;
     isSpecial?: boolean;
 }
 export interface UserDropdownConfig {
     user: UserConfig;
-    trigger: React.ReactElement | string;
+    trigger: ReactElement | string;
     items: DropdownItemConfig[];
 }
 interface Props {

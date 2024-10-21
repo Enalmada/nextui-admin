@@ -1,5 +1,5 @@
 // src/layout/layout-context.ts
-import {createContext, useContext} from "react";
+import { createContext, useContext } from "react";
 var SidebarContext = createContext({
   collapsed: false,
   setCollapsed: () => {

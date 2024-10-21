@@ -1,16 +1,13 @@
 'use client';
 
 // src/sidebar/sidebar.tsx
-import {usePathname} from "next/navigation";
-import {useSidebarContext} from "../layout/layout-context";
-import {CompaniesDropdown} from "./companies-dropdown";
-import {SidebarItem} from "./sidebar-item";
-import {SidebarMenu} from "./sidebar-menu";
-import {Sidebar} from "./sidebar.styles";
-import {
-jsxDEV,
-Fragment
-} from "react/jsx-dev-runtime";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { useSidebarContext } from "../layout/layout-context";
+import { CompaniesDropdown } from "./companies-dropdown";
+import { SidebarItem } from "./sidebar-item";
+import { SidebarMenu } from "./sidebar-menu";
+import { Sidebar } from "./sidebar.styles";
 
 var ConditionalWrapper = ({
   condition,
@@ -20,54 +17,41 @@ var ConditionalWrapper = ({
   if (children === undefined) {
     return null;
   }
-  return condition ? wrapper(children) : jsxDEV(Fragment, {
-    children
-  }, undefined, false, undefined, this);
+  return condition ? wrapper(children) : /* @__PURE__ */ React.createElement(React.Fragment, null, children);
 };
 var SidebarWrapper = ({ sidebarConfig, adminNavHeader }) => {
   const { collapsed, setCollapsed } = useSidebarContext();
   const pathname = usePathname();
-  return jsxDEV("aside", {
-    className: "sticky top-0 z-[202] h-screen",
-    children: [
-      collapsed ? jsxDEV("div", {
-        className: Sidebar.Overlay(),
-        onClick: setCollapsed
-      }, undefined, false, undefined, this) : null,
-      jsxDEV("div", {
-        className: Sidebar({
-          collapsed
-        }),
-        children: [
-          jsxDEV("div", {
-            className: Sidebar.Header(),
-            children: jsxDEV(CompaniesDropdown, {
-              adminNavHeader
-            }, undefined, false, undefined, this)
-          }, undefined, false, undefined, this),
-          jsxDEV("div", {
-            className: "flex h-full flex-col justify-between",
-            children: jsxDEV("div", {
-              className: Sidebar.Body(),
-              children: sidebarConfig.map((section, sectionIndex) => jsxDEV(ConditionalWrapper, {
-                condition: !!section.title,
-                wrapper: (children) => jsxDEV(SidebarMenu, {
-                  title: section.title || "",
-                  children
-                }, undefined, false, undefined, this),
-                children: section.items.map((item, itemIndex) => jsxDEV(SidebarItem, {
-                  isActive: pathname === item.href,
-                  title: item.title,
-                  icon: item.icon,
-                  href: item.href
-                }, `item-${itemIndex}`, false, undefined, this))
-              }, `section-${sectionIndex}`, false, undefined, this))
-            }, undefined, false, undefined, this)
-          }, undefined, false, undefined, this)
-        ]
-      }, undefined, true, undefined, this)
-    ]
-  }, undefined, true, undefined, this);
+  return /* @__PURE__ */ React.createElement("aside", {
+    className: "sticky top-0 z-[202] h-screen"
+  }, collapsed ? /* @__PURE__ */ React.createElement("div", {
+    className: Sidebar.Overlay(),
+    onClick: setCollapsed
+  }) : null, /* @__PURE__ */ React.createElement("div", {
+    className: Sidebar({
+      collapsed
+    })
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: Sidebar.Header()
+  }, /* @__PURE__ */ React.createElement(CompaniesDropdown, {
+    adminNavHeader
+  })), /* @__PURE__ */ React.createElement("div", {
+    className: "flex h-full flex-col justify-between"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: Sidebar.Body()
+  }, sidebarConfig.map((section, sectionIndex) => /* @__PURE__ */ React.createElement(ConditionalWrapper, {
+    key: `section-${sectionIndex}`,
+    condition: !!section.title,
+    wrapper: (children) => /* @__PURE__ */ React.createElement(SidebarMenu, {
+      title: section.title || ""
+    }, children)
+  }, section.items.map((item, itemIndex) => /* @__PURE__ */ React.createElement(SidebarItem, {
+    key: `item-${itemIndex}`,
+    isActive: pathname === item.href,
+    title: item.title,
+    icon: item.icon,
+    href: item.href
+  }))))))));
 };
 export {
   SidebarWrapper

@@ -1,15 +1,13 @@
 // src/navbar/darkmodeswitch.tsx
-import {useTheme as useNextTheme} from "@enalmada/next-themes";
-import {Switch} from "@nextui-org/react";
-import {
-jsxDEV
-} from "react/jsx-dev-runtime";
+import { useTheme as useNextTheme } from "@enalmada/next-themes";
+import { Switch } from "@nextui-org/react";
+import React from "react";
 var DarkModeSwitch = () => {
   const { setTheme, theme } = useNextTheme();
-  return jsxDEV(Switch, {
+  return /* @__PURE__ */ React.createElement(Switch, {
     isSelected: theme === "dark",
     onValueChange: (e) => setTheme(e ? "dark" : "light")
-  }, undefined, false, undefined, this);
+  });
 };
 export {
   DarkModeSwitch

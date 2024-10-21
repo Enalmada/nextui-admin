@@ -1,2 +1,2 @@
-import React from 'react';
+import React from "react";
 export declare const InfoIcon: () => React.JSX.Element;

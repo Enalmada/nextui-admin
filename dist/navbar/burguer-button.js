@@ -1,19 +1,13 @@
 // src/navbar/burguer-button.tsx
-import {useSidebarContext} from "../layout/layout-context";
-import {StyledBurgerButton} from "./navbar.styles";
-import {
-jsxDEV
-} from "react/jsx-dev-runtime";
+import React from "react";
+import { useSidebarContext } from "../layout/layout-context";
+import { StyledBurgerButton } from "./navbar.styles";
 var BurguerButton = () => {
   const { collapsed: _collapsed, setCollapsed } = useSidebarContext();
-  return jsxDEV("div", {
+  return /* @__PURE__ */ React.createElement("div", {
     className: StyledBurgerButton(),
-    onClick: setCollapsed,
-    children: [
-      jsxDEV("div", {}, undefined, false, undefined, this),
-      jsxDEV("div", {}, undefined, false, undefined, this)
-    ]
-  }, undefined, true, undefined, this);
+    onClick: setCollapsed
+  }, /* @__PURE__ */ React.createElement("div", null), /* @__PURE__ */ React.createElement("div", null));
 };
 export {
   BurguerButton

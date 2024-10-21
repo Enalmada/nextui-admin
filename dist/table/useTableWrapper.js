@@ -1,6 +1,9 @@
 // src/table/useTableWrapper.tsx
-import {useState} from "react";
-import {TableWrapper as TableWrapper2} from "./TableWrapper";
+import React from "react";
+import { useState } from "react";
+import {
+  TableWrapper
+} from "./TableWrapper";
 function useTableWrapper({
   defaultSortDescriptor,
   defaultPageDescriptor
@@ -16,7 +19,7 @@ function useTableWrapper({
     ...defaultPageDescriptor
   });
   const TableWrapperComponent = (props) => {
-    return jsxDEV(TableWrapper2, {
+    return /* @__PURE__ */ React.createElement(TableWrapper, {
       ...props,
       paginationProps: {
         pageDescriptor,
@@ -28,7 +31,7 @@ function useTableWrapper({
         sortDescriptor,
         setSortDescriptor
       }
-    }, undefined, false, undefined, this);
+    });
   };
   return {
     TableWrapperComponent,
@@ -38,9 +41,6 @@ function useTableWrapper({
     setPageDescriptor
   };
 }
-import {
-jsxDEV
-} from "react/jsx-dev-runtime";
 export {
   useTableWrapper
 };

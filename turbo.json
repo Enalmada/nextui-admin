@@ -1,0 +1,21 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": ["**/.env.*local"],
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"]
+		},
+		"test": {
+			"inputs": ["src/**/*.tsx", "src/**/*.ts"]
+		},
+		"test:unit": {
+			"inputs": ["src/**/*.tsx", "src/**/*.ts"]
+		},
+		"lint": {},
+		"check-types": {},
+		"dev:install": {
+			"inputs": ["package.json", "bun.lockb"]
+		}
+	}
+}

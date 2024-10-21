@@ -1,51 +1,54 @@
-import React, { useState } from 'react';
-import { Accordion, AccordionItem } from '@nextui-org/react';
+import { Accordion, AccordionItem } from "@nextui-org/react";
+import type { ReactNode } from "react";
+import React from "react";
+import { useState } from "react";
 
-import { ChevronUpIcon } from '../icons/sidebar/chevron-up-icon';
+import { ChevronUpIcon } from "../icons/sidebar/chevron-up-icon";
 
 interface Props {
-  icon: React.ReactNode;
-  title: string;
-  items: string[];
+	icon: ReactNode;
+	title: string;
+	items: string[];
 }
 
 export const CollapseItems = ({ icon, items, title }: Props) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_open, _setOpen] = useState(false);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [_open, _setOpen] = useState(false);
 
-  return (
-    <div className="flex h-full cursor-pointer items-center gap-4">
-      <Accordion className="px-0">
-        <AccordionItem
-          indicator={<ChevronUpIcon />}
-          classNames={{
-            indicator: 'data-[open=true]:-rotate-180',
-            trigger:
-              'py-0 min-h-[44px] hover:bg-default-100 rounded-xl active:scale-[0.98] transition-transform px-3.5',
+	return (
+		<div className="flex h-full cursor-pointer items-center gap-4">
+			<Accordion className="px-0">
+				<AccordionItem
+					indicator={<ChevronUpIcon />}
+					classNames={{
+						indicator: "data-[open=true]:-rotate-180",
+						trigger:
+							"py-0 min-h-[44px] hover:bg-default-100 rounded-xl active:scale-[0.98] transition-transform px-3.5",
 
-            title: 'px-0 flex text-base gap-2 h-full items-center cursor-pointer',
-          }}
-          aria-label="Accordion 1"
-          title={
-            <div className="flex flex-row gap-2">
-              <span>{icon}</span>
-              <span>{title}</span>
-            </div>
-          }
-        >
-          <div className="pl-12">
-            {items.map((item, index) => (
-              <span
-                key={index}
-                className="flex w-full  text-default-500 transition-colors hover:text-default-900"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </AccordionItem>
-      </Accordion>
-      {/* <Accordion
+						title:
+							"px-0 flex text-base gap-2 h-full items-center cursor-pointer",
+					}}
+					aria-label="Accordion 1"
+					title={
+						<div className="flex flex-row gap-2">
+							<span>{icon}</span>
+							<span>{title}</span>
+						</div>
+					}
+				>
+					<div className="pl-12">
+						{items.map((item, index) => (
+							<span
+								key={index}
+								className="flex w-full  text-default-500 transition-colors hover:text-default-900"
+							>
+								{item}
+							</span>
+						))}
+					</div>
+				</AccordionItem>
+			</Accordion>
+			{/* <Accordion
         title={
           <div
             className="flex items-center justify-between w-full py-5 px-7 rounded-8 transition-all duration-150 ease-in-out cursor-pointer hover:bg-accents2 active:scale-98"
@@ -133,6 +136,6 @@ export const CollapseItems = ({ icon, items, title }: Props) => {
           </div>
         ))}
       </Accordion> */}
-    </div>
-  );
+		</div>
+	);
 };
