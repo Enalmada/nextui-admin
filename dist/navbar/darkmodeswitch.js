@@ -1,5 +1,5 @@
 // src/navbar/darkmodeswitch.tsx
-import { useTheme as useNextTheme } from "@enalmada/next-themes";
+import { useTheme as useNextTheme } from "next-themes";
 import { Switch } from "@nextui-org/react";
 import React from "react";
 var DarkModeSwitch = () => {

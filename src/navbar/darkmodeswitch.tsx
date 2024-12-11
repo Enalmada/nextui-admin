@@ -1,5 +1,5 @@
-import { useTheme as useNextTheme } from "@enalmada/next-themes";
 import { Switch } from "@nextui-org/react";
+import { useTheme as useNextTheme } from "next-themes";
 import React from "react";
 
 export const DarkModeSwitch = () => {
