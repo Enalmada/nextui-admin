@@ -1,5 +1,11 @@
 # @enalmada/nextui-admin
 
+## 0.1.7
+
+### Patch Changes
+
+- 28a4e2e: update to next-themes
+
 ## 0.1.6
 
 ### Patch Changes
